@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Aliya Klassen](https://up.htmlacademy.ru/htmlcss/18/user/402941).
-* Наставник: `Неизвестно`.
+* Наставник: [Слава Милин](https://htmlacademy.ru/profile/id500603).
 
 ---
 
