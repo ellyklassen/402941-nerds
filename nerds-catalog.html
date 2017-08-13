@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-navigation-logo">
+          <img src="img/logo" alt="Логотип Нердс">
+        </a>
+        <ul>
+          <li><a href="nerds-index.psd">Студия</a></li>
+          <li><a href="nerds-clients.psd">Клиенты</a></li>
+          <li><a href="nerds-catalog.psd">Магазин</a></li>
+          <li><a href="nerds-contacts.psd">Контакты</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li>Корзина</li>
+        </ul>
+      </nav>
+      <h1>Магазин готовых шаблонов</h1>
+    </header>
+    <main class="container">
+      <form method="post">
+        <p><b>Стоимость:</b></p>
+        <label for="price">
+         от<input type="range" id="price" name="price" min="0" max="15 000">до
+        </label>
+        <p><b>Сетка:</b></p>
+        <label>
+         <input type="radio" name="adaptive" value="adaptive" checked>
+         Адаптивная
+       </label>
+       <label>
+         <input type="radio" name="fixed" value="fixed">
+         Фиксированная
+       </label>
+       <label>
+         <input type="radio" name="reflowable" value="reflowable">
+         Резиновая
+       </label>
+       <p><b>Особенности:</b></p>
+       <label>
+         <input type="checkbox" name="features" checked>
+         Слайдер
+       </label>
+       <label>
+         <input type="checkbox" name="features">
+         Блок преимуществ
+       </label>
+       <label>
+         <input type="checkbox" name="features" checked>
+         Новости
+       </label>
+       <label>
+         <input type="checkbox" name="features">
+         Галерея
+       </label>
+       <label>
+         <input type="checkbox" name="features">
+         Корзина
+       </label>
+       <input type="submit" value="Показать">
+      </form>
+
+      <section class="examples">
+        <form>
+          <p><b>Сортировать:</b></p>
+          <label>
+            <input type="checkbox" name="price" checked>
+            по цене
+          </label>
+          <label>
+            <input type="checkbox" name="type">
+            по типу
+          </label>
+          <label>
+            <input type="checkbox" name="name">
+            по названию
+          </label>
+        </form>
+
+      <div class="template">
+        <a href="#">
+          <img src="img/sedona" alt="Шаблон сайта Седона">
+        </a>
+      </div>
+      <div class="template">
+        <a href="#">
+          <img src="img/pink" alt="Шаблон сайта Pink">
+        </a>
+      </div>
+      <div class="template">
+        <a href="#">
+          <img src="img/borodincki" alt="Шаблон сайта Барбершопа Бородинский">
+        </a>
+      </div>
+      <div class="template">
+        <a href="#">
+          <img src="img/mishka" alt="Шаблон сайта Мишка">
+        </a>
+      </div>
+      <div class="template">
+        <a href="#">
+          <img src="/aplus" alt="Шаблон сайта А+">
+        </a>
+      </div>
+      <div class="template">
+        <a href="#">
+          <img src="img/kvast" alt="Шаблон сайта Крафтовый квас Кваст">
+        </a>
+      </div>
+
+      <ul class="pagination-list">
+        <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+        <li class="pagination-item"><a href="#">2</a></li>
+        <li class="pagination-item"><a href="#">3</a></li>
+        <li class="pagination-navigation"><a href="#">Следующая</a></li>
+      </ul>
+      </section>
+    </main>
+
+    <div class="maps">
+    <img src="img/maps">
+   </div>
+  <footer class="main-footer">
+    <div class="footer-social">
+      <ul>
+        <li class="social-button"><a href="#">Вконтакте</a></li>
+        <li class="social-button"><a href="#">Фейсбук</a></li>
+        <li class="social-button"><a href="#">Инстаграм</a></li>
+      </ul>
+    </div>
+    <b>Давайте дружить, это выгодно!</b>
+    <p>Скидка 10% для друзей из социальных сетей.</p>
+  </footer>
+</body>
+</html>
