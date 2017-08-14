@@ -17,31 +17,36 @@
           <li><a href="nerds-contacts.psd">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li>Корзина</li>
+          <li><a href="#">Корзина</a></li>
         </ul>
       </nav>
       <h1>Магазин готовых шаблонов</h1>
     </header>
     <main class="container">
       <form method="post">
-        <p><b>Стоимость:</b></p>
-        <label for="price">
-         от<input type="range" id="price" name="price" min="0" max="15 000">до
-        </label>
-        <p><b>Сетка:</b></p>
+        <div class="form">
+         <h3>Стоимость:</h3>
+         <label for="price">
+          от<input type="range" name="price" min="0" max="15 000">до
+         </label>
+        </div>
+        <div class="form">
+         <h3>Сетка:</h3>
+         <label>
+          <input type="radio" name="grid" value="adaptive" checked>
+          Адаптивная
+         </label>
+         <label>
+          <input type="radio" name="grid" value="fixed">
+          Фиксированная
+         </label>
         <label>
-         <input type="radio" name="adaptive" value="adaptive" checked>
-         Адаптивная
-       </label>
-       <label>
-         <input type="radio" name="fixed" value="fixed">
-         Фиксированная
-       </label>
-       <label>
-         <input type="radio" name="reflowable" value="reflowable">
+         <input type="radio" name="grid" value="reflowable">
          Резиновая
-       </label>
-       <p><b>Особенности:</b></p>
+        </label>
+      </div>
+      <div class="form">
+       <h3>Особенности:</h3>
        <label>
          <input type="checkbox" name="features" checked>
          Слайдер
@@ -63,54 +68,53 @@
          Корзина
        </label>
        <input type="submit" value="Показать">
-      </form>
+     </div>
+    </form>
 
-      <section class="examples">
-        <form>
-          <p><b>Сортировать:</b></p>
-          <label>
-            <input type="checkbox" name="price" checked>
-            по цене
-          </label>
-          <label>
-            <input type="checkbox" name="type">
-            по типу
-          </label>
-          <label>
-            <input type="checkbox" name="name">
-            по названию
-          </label>
-        </form>
+    <section class="examples">
+      <h2 class="visually-hidden">Примеры готовых сайтов</h2>
+      <div class="sort">
+        <p>Сортировать:</p>
+          <a href="#">по цене</a>
+          <a href="#">по типу</a>
+          <a href="#">по названию</a>
+      </div>
 
       <div class="template">
-        <a href="#">
           <img src="img/sedona" alt="Шаблон сайта Седона">
-        </a>
+          <p>Sedona</p>
+          <p>Информационный сайт для туристов</p>
+          <a href="#" class="button">9 900 руб.</a>
       </div>
       <div class="template">
-        <a href="#">
           <img src="img/pink" alt="Шаблон сайта Pink">
-        </a>
+          <p>Pink App</p>
+          <p>Продуктовый лендинг приложения для iOS и Android</p>
+          <a href="#" class="button">9 900 руб.</a>
       </div>
       <div class="template">
-        <a href="#">
           <img src="img/borodincki" alt="Шаблон сайта Барбершопа Бородинский">
-        </a>
+          <p>Borodinski</p>
+          <p>Описание сайта Барбершопа Бородинский</p>
+          <a href="#" class="button">9 900 руб.</a>
       </div>
       <div class="template">
-        <a href="#">
           <img src="img/mishka" alt="Шаблон сайта Мишка">
-        </a>
+          <p>Mishka</p>
+          <p>Описание сайта Мишка</p>
+          <a href="#" class="button">9 900 руб.</a>
       </div>
       <div class="template">
-        <a href="#">
           <img src="/aplus" alt="Шаблон сайта А+">
-        </a>
+          <p>A+</p>
+          <p>Описание сайта A+</p>
+          <a href="#" class="button">9 900 руб.</a>
       </div>
       <div class="template">
-        <a href="#">
           <img src="img/kvast" alt="Шаблон сайта Крафтовый квас Кваст">
-        </a>
+          <p>Kvast</p>
+          <p>Описание сайта Кваст</p>
+          <a href="#" class="button">9 900 руб.</a>
       </div>
 
       <ul class="pagination-list">
@@ -122,10 +126,20 @@
       </section>
     </main>
 
-    <div class="maps">
-    <img src="img/maps">
-   </div>
   <footer class="main-footer">
+    <div class="footer-maps">
+      <div  class="footer-contacts">
+        <p>Nёrds design studio</p>
+        <p>191186б, Санкт-Петербург,
+           ул. Б. Конюшенная, д. 19/8
+           тел.: +7(812)275-75-75
+        </p>
+        <div class="footer-button">
+          <input type="submit" value="Напишите нам">
+        </div>
+      </div>
+     <img src="img/maps" alt="Карта расположения студии">
+    </div>
     <div class="footer-social">
       <ul>
         <li class="social-button"><a href="#">Вконтакте</a></li>
@@ -133,7 +147,7 @@
         <li class="social-button"><a href="#">Инстаграм</a></li>
       </ul>
     </div>
-    <b>Давайте дружить, это выгодно!</b>
+    <p>Давайте дружить, это выгодно!</p>
     <p>Скидка 10% для друзей из социальных сетей.</p>
   </footer>
 </body>
