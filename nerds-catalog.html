@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -11,10 +13,10 @@
         <a class="main-navigation-logo" href="index.html">
           <img src="img/nerds-logo.svg" alt="Логотип Нердс, переводящий на главную страницу">
         </a>
-        <ul>
+        <ul class="site-navigation">
           <li><a href="nerds-index.psd">Студия</a></li>
           <li><a href="nerds-clients.psd">Клиенты</a></li>
-          <li><a href="nerds-catalog.psd">Магазин</a></li>
+          <li><a href="nerds-catalog.html">Магазин</a></li>
           <li><a href="nerds-contacts.psd">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
@@ -80,12 +82,12 @@
           <a href="#">по типу</a>
           <a href="#">по названию</a>
       </div>
-        <button class="icon_down_up">
+        <a href="#" class="icon_down_up">
           <img src="img/icon-down-dir.svg" alt="Вперед">
-        </button>
-        <button class="icon_down_up">
+        </a>
+        <a href="#" class="icon_down_up">
           <img src="img/icon-up-dir.svg" alt="Назад">
-        </button>
+        </a>
       <div class="template">
           <img src="img/img-sedona.jpg" alt="Шаблон сайта Седона">
           <p>Sedona</p>
@@ -144,20 +146,23 @@
           <button type="submit">Напишите нам</button>
         </div>
       </div>
-     <img src="img/map.jpg" alt="Студия Nёrds находится по адресу Санкт-Петербург,
-        ул. Б. Конюшенная, д. 19/8, 191186б">
+     <img src="img/map.jpg" alt="Санкт-Петербург,
+        ул. Б. Конюшенная, д. 19/8, тел.: +7(812)275-75-75">
     </div>
     <div class="footer-social">
       <ul>
-        <li class="social-button"><a href="#">Вконтакте</a>
+        <li class="social-button">
+          <a href="#">Вконтакте</a>
         </li>
-        <li class="social-button"><a href="#">Фейсбук</a>
+        <li class="social-button">
+          <a href="#">Фейсбук</a>
         </li>
-        <li class="social-button"><a href="#">Инстаграм</a>
+        <li class="social-button">
+          <a href="#">Инстаграм</a>
         </li>
       </ul>
     </div>
-    <p>Давайте дружить, это выгодно!</p>
+    <p class="strong">Давайте дружить, это выгодно!</p>
     <p>Скидка 10% для друзей из социальных сетей.</p>
   </footer>
 </body>
