@@ -3,12 +3,7 @@ html, body {
   padding: 0;
 
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: normal;
   color: #353e42;
-
-  background-color: #ffffff;
 }
 
 a {
@@ -45,9 +40,6 @@ a {
 
  .main-header {
    background-color: #eeeeee;
-   background-image: url("img/greyback.jpg");
-   background-position: 0 0;
-   background-repeat: no-repeat;
  }
 
  .main-header .button {
@@ -178,6 +170,10 @@ a {
 
  .examples .button:active {
    background-color: #d7373b;
+ }
+
+ .icon-down-up a  {
+   color: #000000;
  }
 
 .sort a {
