@@ -226,6 +226,7 @@ a {
   font-size: 14px;
   line-height: 18px;
   color: #b2b2b2;
+  margin-right: 25px;
 }
 
 .sort a:hover,
@@ -331,10 +332,10 @@ body {
 
 .main-navigation {
   display: flex;
-  width: 1180px;
-  padding: 45px 20px;
-  margin: 0 120px;
   justify-content: space-between;
+  padding: 45px 20px;
+  margin: auto;
+  width: 1200px;
 }
 
 .main-header .catalog-page {
@@ -342,6 +343,11 @@ body {
   font-size: 55px;
   line-height: 55px;
   color: #000000;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
 }
 
 .catalog {
@@ -368,8 +374,9 @@ body {
 
 .products-list {
   display: flex;
-  margin: 85px 120px 80px 120px;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .products-item {
@@ -379,7 +386,8 @@ body {
 
 .features {
   position: relative;
-  margin: 0 120px 75px 120px;
+  margin-bottom: 75px;
+  padding-top: 40px;
 }
 .features-description {
   display: flex;
@@ -405,7 +413,6 @@ body {
   width: 1160px;
   padding: 10px 30px;
   align-items: center;
-  margin: 0 120px;
 }
 
 .footer-maps {
@@ -479,6 +486,9 @@ body {
   width: 360px;
   height: 616px;
   position: relative;
+  margin-top: 33px;
+  padding-top: 40px;
+  background-image: url("../img/browser.svg");
 }
 
 .template-description {
@@ -500,7 +510,7 @@ body {
 
 .inner-page {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .main-form {
@@ -520,11 +530,6 @@ body {
   padding: 10px;
 }
 
-.sort-wrapper {
-  width: 760px;
-  padding: 0px;
-  margin-top: 55px;
-}
 
 .sort  {
   color: #000000;
@@ -532,21 +537,35 @@ body {
   line-height: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  float: left;
-  padding-bottom: 55px;
+  width: 360px;
+  margin-top: 55px;
+  margin-bottom: 26px;
 }
 
 .sort-links {
-  float: right;
+  width: 360px;
+  margin-top: 55px;
 }
 
 .sort-links .icon-down {
   background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
+  display: block;
+  width: 11px;
+  height: 10px;
+  float: right;
+  margin-left: 17px;
+  margin-right: 0;
 }
 
 .sort-links .icon-up {
   background-image: url("../img/icon-up-dir.svg");
   background-repeat: no-repeat;
   opacity: 0.3;
+  display: block;
+  width: 11px;
+  height: 10px;
+  float: right;
+  margin-left: 18px;
+  margin-right: 0;
 }
