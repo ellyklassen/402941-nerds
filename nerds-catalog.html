@@ -8,125 +8,140 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header catalog">
       <nav class="main-navigation">
         <a class="main-navigation-logo" href="index.html">
           <img src="img/nerds-logo.svg" alt="Логотип Нердс, переводящий на главную страницу">
         </a>
         <ul class="site-navigation">
-          <li><a href="nerds-index.psd">Студия</a></li>
-          <li><a href="nerds-clients.psd">Клиенты</a></li>
-          <li><a href="nerds-catalog.html">Магазин</a></li>
-          <li><a href="nerds-contacts.psd">Контакты</a></li>
+          <li><a href="index.html">Студия</a></li>
+          <li><a href="#">Клиенты</a></li>
+          <li><a href="#" class="current">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
           <li><a href="#">Корзина</a></li>
         </ul>
       </nav>
-      <h1>Магазин готовых шаблонов</h1>
+      <h1 class="catalog-page">Магазин готовых шаблонов</h1>
     </header>
-    <main class="container">
-      <form method="post">
+    <main class="container inner-page">
+      <form method="post" class="main-form">
         <div class="form">
          <h3>Стоимость:</h3>
-         <label>
+         <label class="form-variant">
           от<input type="range" name="price" min="0" max="15000">до
          </label>
         </div>
         <div class="form">
          <h3>Сетка:</h3>
-         <label>
+         <label class="form-variant">
           <input type="radio" name="grid" value="adaptive" checked>
           Адаптивная
          </label>
-         <label>
+         <label class="form-variant">
           <input type="radio" name="grid" value="fixed">
           Фиксированная
          </label>
-        <label>
+        <label class="form-variant">
          <input type="radio" name="grid" value="reflowable">
          Резиновая
         </label>
       </div>
       <div class="form">
        <h3>Особенности:</h3>
-       <label>
+       <label class="form-variant">
          <input type="checkbox" name="features" checked>
          Слайдер
        </label>
-       <label>
+       <label class="form-variant">
          <input type="checkbox" name="features">
          Блок преимуществ
        </label>
-       <label>
+       <label class="form-variant">
          <input type="checkbox" name="features" checked>
          Новости
        </label>
-       <label>
+       <label class="form-variant">
          <input type="checkbox" name="features">
          Галерея
        </label>
-       <label>
+       <label class="form-variant">
          <input type="checkbox" name="features">
          Корзина
        </label>
-       <button type="submit">Показать</button>
+       <button type="submit" class="button">Показать</button>
      </div>
     </form>
 
     <section class="examples">
       <h2 class="visually-hidden">Примеры готовых сайтов</h2>
+      <div class="sort-wrapper">
       <div class="sort">
-        <p>Сортировать:</p>
+        Сортировать:
+      </div>
+      <div class="sort-links">
           <a href="#">по цене</a>
           <a href="#">по типу</a>
           <a href="#">по названию</a>
-      </div>
-      <div class="icon-down-up">
-        <a href="#" class="icon_down_up">
-          Вперед
-        </a>
-        <a href="#" class="icon_down_up">
+        <a href="#" class="icon-down">
           Назад
         </a>
+        <a href="#" class="icon-up">
+          Вперед
+        </a>
       </div>
+    </div>
+      <div class="template-examples">
       <div class="template">
           <img src="img/img-sedona.jpg" alt="Шаблон сайта Седона">
-          <p>Sedona</p>
+        <div class="template-description">
+          <p class="template-name">Sedona</p>
           <p>Информационный сайт для туристов</p>
           <a href="#" class="button">9 900 руб.</a>
+        </div>
       </div>
       <div class="template">
           <img src="img/img-pink.jpg" alt="Шаблон сайта Pink">
-          <p>Pink App</p>
+        <div class="template-description">
+          <p class="template-name">Pink App</p>
           <p>Продуктовый лендинг приложения для iOS и Android</p>
           <a href="#" class="button">9 900 руб.</a>
+        </div>
       </div>
       <div class="template">
           <img src="img/img-barbershop.jpg" alt="Шаблон сайта Барбершопа Бородинский">
-          <p>Borodinski</p>
-          <p>Описание сайта Барбершопа Бородинский</p>
+        <div class="template-description">
+          <p class="template-name">Barbershop</p>
+          <p>Сайт салона красоты. Для мужчин, да.</p>
           <a href="#" class="button">9 900 руб.</a>
+        </div>
       </div>
       <div class="template">
           <img src="img/img-mishka.jpg" alt="Шаблон сайта Мишка">
-          <p>Mishka</p>
-          <p>Описание сайта Мишка</p>
+        <div class="template-description">
+          <p class="template-name">Mishka</p>
+          <p>Интернет-магазин вязаных игрушек</p>
           <a href="#" class="button">9 900 руб.</a>
+        </div>
       </div>
       <div class="template">
           <img src="img/img-aplus.jpg" alt="Шаблон сайта А+">
-          <p>A+</p>
-          <p>Описание сайта A+</p>
+        <div class="template-description">
+          <p class="template-name">A+</p>
+          <p>Лендинг курсов повышение квалификации</p>
           <a href="#" class="button">9 900 руб.</a>
+        </div>
       </div>
       <div class="template">
           <img src="img/img-kvast.jpg" alt="Шаблон сайта Крафтовый квас Кваст">
-          <p>Kvast</p>
-          <p>Описание сайта Кваст</p>
+        <div class="template-description">
+          <p class="template-name">Кваст</p>
+          <p>Промо-сайт крафтового производителя</p>
           <a href="#" class="button">9 900 руб.</a>
+        </div>
       </div>
-
+    </div>
       <ul class="pagination-list">
         <li class="pagination-item pagination-item-current">
           <a href="#">1</a></li>
@@ -149,27 +164,31 @@
            тел.: +7(812)275-75-75
         </p>
         <div class="footer-button">
-          <button type="submit">Напишите нам</button>
+          <button type="submit" class="button">Напишите нам</button>
         </div>
       </div>
-     <img src="img/map.jpg" alt="Санкт-Петербург,
+     <img src="img/map-marker.jpg" alt="Санкт-Петербург,
         ул. Б. Конюшенная, д. 19/8, тел.: +7(812)275-75-75">
     </div>
+    <div class="footer-bottom">
     <div class="footer-social">
-      <ul>
+      <ul cass="footer-social-list">
         <li class="social-button">
-          <a href="#">Вконтакте</a>
+          <a href="#" class="social-vk"><p class="visually-hidden">Вконтакте</p></a>
         </li>
         <li class="social-button">
-          <a href="#">Фейсбук</a>
+          <a href="#" class="social-fb"><p class="visually-hidden">Фейсбук</p></a>
         </li>
         <li class="social-button">
-          <a href="#">Инстаграм</a>
+          <a href="#" class="social-ig"><p class="visually-hidden">Инстаграм</p></a>
         </li>
       </ul>
     </div>
+    <div class="footer-slogan">
     <p class="strong">Давайте дружить, это выгодно!</p>
     <p>Скидка 10% для друзей из социальных сетей.</p>
+  </div>
+  </div>
   </footer>
 </body>
 </html>

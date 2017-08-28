@@ -14,21 +14,25 @@
           <img src="img/nerds-logo.svg" alt="Логотип Нердс">
         </a>
         <ul class="site-navigation">
-          <li><a href="nerds-index.psd">Студия</a></li>
-          <li><a href="nerds-clients.psd">Клиенты</a></li>
+          <li><a href="#">Студия</a></li>
+          <li><a href="#">Клиенты</a></li>
           <li><a href="nerds-catalog.html">Магазин</a></li>
-          <li><a href="nerds-contacts.psd">Контакты</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
           <li><a href="#">Корзина</a></li>
         </ul>
       </nav>
       <section class="slider">
+        <div class="slider-wrapper1">
         <h2>Долго, дорого,<br>
             скрупулезно.</h2>
         <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
         <a class="button" href="info.html">Узнать больше</a>
-        <img src="img/header-slider-1.png" alt="Первый слайд Нердс">
+      </div>
+      <div class="slider-wrapper2">
+        <img class="slider-img" src="img/header-slider-1.png" alt="Первый слайд Нердс">
+      </div>
       </section>
     </header>
     <main class="container">
@@ -41,7 +45,7 @@
               <img src="img/products-item-websites.jpg" alt="Веб-сайты">
           </p>
           <h3>Веб-сайты</h3>
-          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <p class="products-item-description">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a class="button button-1" href="#">Заказать</a>
         </div>
 
@@ -50,7 +54,7 @@
               <img src="img/products-item-apps.jpg" alt="Приложения">
           </p>
           <h3>Приложения</h3>
-          <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+          <p class="products-item-description">Покорите топ-10 приложений в AppStore и Google Play</p>
           <a class="button button-2" href="#">Заказать</a>
         </div>
 
@@ -59,12 +63,13 @@
               <img src="img/products-item-presentation.jpg" alt="Презентации">
           </p>
           <h3>Презентации</h3>
-          <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+          <p class="products-item-description">Вы даже не подозреваете, насколько вы изумительны!</p>
           <a class="button button-3" href="#">Заказать</a>
         </div>
     </section>
 
     <section class="features">
+     <div class="features-description">
       <h2>Мы маленькая, но гордая дизайн-студия из Краснодара.</h2>
       <p>Исповедуем принципы минимализма и чистоты.
        Ставим математический расчет превыше креатива.
@@ -75,13 +80,15 @@
         <li>Мобильных приложений для iOS и Android</li>
         <li>Слайдшоу и видео для корпоротивных презентаций</li>
       </ul>
+    </div>
+    <div class="features-table">
         <img src="img/nerds-illustration.jpg" alt="Лого Нердс" >
-      <p class="strong">С 2004 года любим точность во всем:</p>
-      <table>
+      <p class="strong features-table-name">С 2004 года любим точность во всем:</p>
+      <table class="table">
         <tr class="strong">
-          <td>146%</td>
-          <td>100%</td>
-          <td>50%</td>
+          <td>146<sup>%</sup></td>
+          <td>100<sup>%</sup></td>
+          <td>50<sup>%</sup></td>
         </tr>
         <tr>
           <td>Уровень самоотдачи</td>
@@ -89,6 +96,7 @@
           <td>Минимальная предоплата</td>
         </tr>
       </table>
+   </div>
     </section>
 
     <section class="partners">
@@ -147,33 +155,40 @@
   <footer class="main-footer">
     <div class="footer-maps">
       <div  class="footer-contacts">
+       <div class="address-wrapper">
         <p class="address">Nёrds design studio</p>
         <p>191186б, Санкт-Петербург,
            ул. Б. Конюшенная, д. 19/8
-           тел.: +7(812)275-75-75
+        <p class="telephone">тел.: +7(812)275-75-75</p>
         </p>
+       </div>
         <div class="footer-button">
-          <button type="submit">Напишите нам</button>
+          <button type="submit" class="button">Напишите нам</button>
         </div>
       </div>
-     <img src="img/map.jpg" alt="Санкт-Петербург,
+     <img src="img/map-marker.jpg" alt="Санкт-Петербург,
         ул. Б. Конюшенная, д. 19/8, тел.: +7(812)275-75-75">
     </div>
+    <div class="footer-bottom">
     <div class="footer-social">
-      <ul>
+      <ul class="footer-social-list">
         <li class="social-button">
-          <a href="#">Вконтакте</a>
+          <a href="#" class="social-vk">
+            <p class="visually-hidden">Вконтакте</p></a>
         </li>
         <li class="social-button">
-          <a href="#">Фейсбук</a>
+          <a href="#" class="social-fb"><p class="visually-hidden">Фейсбук</p></a>
         </li>
         <li class="social-button">
-          <a href="#">Инстаграм</a>
+          <a href="#" class="social-ig"><p class="visually-hidden">Инстаграм</p></a>
         </li>
       </ul>
     </div>
+    <div class="footer-slogan">
     <p class="strong">Давайте дружить, это выгодно!</p>
     <p>Скидка 10% для друзей из социальных сетей.</p>
+  </div>
+  </div>
   </footer>
   </body>
 </html>

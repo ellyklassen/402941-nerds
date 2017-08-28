@@ -9,25 +9,20 @@ html, body {
 a {
   text-decoration: none;
 }
-
- button {
-   color: #ffffff;
-   background-color: #fb565a;
-   text-transform: uppercase;
-   border: none;
- }
-
- .form button {
+/* Стили кнопок */
+ .form .button {
    color: #000000;
    background-color: #eeeeee;
+   padding: 20px 88px;
+   margin-top: 18px;
  }
 
- .form button:hover,
- .form button:focus {
+ .form .button:hover,
+ .form .button:focus {
    background-color: #dfdfdf;
  }
 
- .form button:active {
+ .form .button:active {
    color: #959595;
    background-color: rgba(213, 213, 213, 0.3)
  }
@@ -36,8 +31,30 @@ a {
    color: #ffffff;
    background-color: #fb565a;
    text-transform: uppercase;
+   border: none;
+   border-radius: 2px;
  }
 
+ .slider .button {
+   width: 185px;
+   text-align: center;
+   padding: 20px 55px;
+ }
+
+ .footer-button .button {
+   padding: 17px 45px;
+ }
+
+ .social-button {
+   width: 80px;
+   height: 80px;
+   background-color: #e1e1e1;
+   margin: 10px;
+   border-radius: 50%;
+ }
+
+
+/* Стили хедора и навигации по сайту*/
  .main-header {
    background-color: #eeeeee;
  }
@@ -71,7 +88,8 @@ a {
    color: #a6a6a6;
  }
 
- .main-navigation a:active {
+ .main-navigation a:active,
+ .main-navigation .current {
    color: #000000;
    border-bottom: 2px solid #fb565a;
  }
@@ -89,7 +107,7 @@ a {
    line-height: 55px;
    color: #000000;
  }
-
+/* Стили контента */
  .container {
    background-color: #ffffff;
  }
@@ -97,7 +115,10 @@ a {
  .container a{
    color: #ffffff;
  }
-
+/*Стили списка услуг*/
+ .products-list .button {
+   padding: 17px 40px;
+ }
  .products-list .button:active {
    color: #e37376;
  }
@@ -148,6 +169,10 @@ a {
    text-transform: uppercase;
  }
 
+ .products-item-description {
+   padding: 0 0 30px 0;
+ }
+/*Стили особенностей */
  .features {
    border-top: 3px solid #eeeeee;
  }
@@ -158,11 +183,31 @@ a {
    color: #000000;
  }
 
+/*Стили партнеров*/
  .partners {
    border-top: 3px solid #eeeeee;
    border-bottom: 3px solid #eeeeee;
  }
 
+ .partner {
+   opacity: 0.2;
+ }
+
+ .partner:hover,
+ .partner:focus {
+   opacity: 1;
+ }
+
+ .partner:active,
+ .partner:visited  {
+   opacity: 0.1;
+ }
+/*Стили шаблонов сайтов*/
+
+ .examples .button {
+   padding: 17px 60px 17px 60px;
+   text-align: center;
+ }
  .examples .button:hover,
  .examples .button:focus {
    background-color: #e74246;
@@ -171,12 +216,12 @@ a {
  .examples .button:active {
    background-color: #d7373b;
  }
-
+/*Стили пиконок вперед-назад*/
  .icon-down-up a  {
    color: #000000;
  }
-
-.sort a {
+/*Стили ссылок сортировки*/
+.sort-links a {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
@@ -192,27 +237,38 @@ a {
   color: #000000;
 }
 
-.sort p {
-  color: #000000;
-  font-size: 18px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
+/*Стили для выделенного текста*/
 .strong {
   color: #000000;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
-table .strong {
+.table .strong {
   font-size: 45px;
   line-height: 10,06px;
   font-weight: bold;
 }
-
+/*Стили для перехода по страницам*/
 .pagination-list a {
   color: #000000;
-  background-color: #eeeeee;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.pagination-item {
+  height: 35px;
+  width: 50px;
+  background: #eeeeee;
+  margin: 10px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.pagination-item-current {
+  background-color: #ffffff;
+  outline: 3px solid #dbdbdb;
 }
 
 .pagination-list a:hover,
@@ -225,11 +281,16 @@ table .strong {
   color: #959595;
 }
 
-.pagination-item-current a {
-  background-color: #ffffff;
-  border: 2px solid #dbdbdb;
+.pagination-navigation {
+  width: 260px;
+  height: 35px;
+  background-color: #eeeeee;
+  text-align: center;
+  padding-top: 15px;
 }
 
+
+/*Стили подвала*/
 .main-footer .strong {
   font-size: 36px;
   line-height: 36px;
@@ -246,4 +307,246 @@ table .strong {
   color: #000000;
   font-size: 18px;
   line-height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*visually-hidden*/
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+/*---------------------------------Сеточные стили--------------------------------------*/
+
+body {
+  min-width: 1140px;
+}
+
+.main-navigation {
+  display: flex;
+  width: 1180px;
+  padding: 45px 20px;
+  margin: 0 120px;
+  justify-content: space-between;
+}
+
+.main-header .catalog-page {
+  text-align: center;
+  font-size: 55px;
+  line-height: 55px;
+  color: #000000;
+}
+
+.catalog {
+  padding-bottom: 110px;
+}
+
+.site-navigation {
+  display: flex;
+  width: 440px;
+  justify-content: space-between;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 120px;
+}
+
+.slider-wrapper1 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.products-list {
+  display: flex;
+  margin: 85px 120px 80px 120px;
+  justify-content: space-around;
+}
+
+.products-item {
+  width: 300px;
+  height: 350px;
+}
+
+.features {
+  position: relative;
+  margin: 0 120px 75px 120px;
+}
+.features-description {
+  display: flex;
+  flex-direction: column;
+  width: 660px;
+}
+
+.features-table {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 360px;
+  padding: 40px 20px 0px 20px;
+}
+
+.features-table-name {
+  text-align: center;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  padding: 10px 30px;
+  align-items: center;
+  margin: 0 120px;
+}
+
+.footer-maps {
+  position: relative;
+  margin-top: 80px;
+}
+
+.footer-contacts {
+  padding: 50px;
+  width: 230px;
+  position: absolute;
+  top: 55px;
+  left: 140px;
+}
+
+.footer-bottom {
+  position: relative;
+}
+
+.social-vk {
+  display: block;
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 26px;
+  height: 28px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.social-fb {
+  display: block;
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 26px;
+  height: 28px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.social-ig {
+  display: block;
+  background-image: url("../img/insta-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 26px;
+  height: 28px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.footer-slogan {
+  position: absolute;
+  top: 0px;
+  right: 360px;
+}
+.address-wrapper {
+  width: 210px;
+  padding-bottom: 10px;
+}
+
+.template-examples {
+  display: flex;
+  width: 760px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.template {
+  width: 360px;
+  height: 616px;
+  position: relative;
+}
+
+.template-description {
+  position: absolute;
+  bottom: 0;
+  width: 360px;
+  height: 230px;
+  background-color: #eeeeee;
+  text-align: center;
+  color: #666666;
+}
+
+.template-name {
+  color: #000000;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+
+.inner-page {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin-top: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-variant {
+  padding: 10px;
+}
+
+.sort-wrapper {
+  width: 760px;
+  padding: 0px;
+  margin-top: 55px;
+}
+
+.sort  {
+  color: #000000;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  float: left;
+  padding-bottom: 55px;
+}
+
+.sort-links {
+  float: right;
+}
+
+.sort-links .icon-down {
+  background-image: url("../img/icon-down-dir.svg");
+  background-repeat: no-repeat;
+}
+
+.sort-links .icon-up {
+  background-image: url("../img/icon-up-dir.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
 }
