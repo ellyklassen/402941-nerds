@@ -9,7 +9,14 @@ html, body {
 a {
   text-decoration: none;
 }
-/* Стили кнопок */
+
+ .container {
+  width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/*---------------Стили кнопок---------------*/
  .form .button {
    color: #000000;
    background-color: #eeeeee;
@@ -39,6 +46,7 @@ a {
    width: 185px;
    text-align: center;
    padding: 20px 55px;
+   margin-top: 40px;
  }
 
  .footer-button .button {
@@ -54,7 +62,7 @@ a {
  }
 
 
-/* Стили хедора и навигации по сайту*/
+/*--------------Стили хедора и навигации по сайту---------------*/
  .main-header {
    background-color: #eeeeee;
  }
@@ -107,15 +115,8 @@ a {
    line-height: 55px;
    color: #000000;
  }
-/* Стили контента */
- .container {
-   background-color: #ffffff;
- }
 
- .container a{
-   color: #ffffff;
- }
-/*Стили списка услуг*/
+/*---------------Стили списка услуг---------------*/
  .products-list .button {
    padding: 17px 40px;
  }
@@ -251,6 +252,9 @@ a {
   font-weight: bold;
 }
 /*Стили для перехода по страницам*/
+.pagination-list {
+  padding: 0;
+}
 .pagination-list a {
   color: #000000;
   font-size: 16px;
@@ -270,19 +274,21 @@ a {
 .pagination-item-current {
   background-color: #ffffff;
   outline: 3px solid #dbdbdb;
+  width: 47px;
+  height: 32px;
 }
 
-.pagination-list a:hover,
-.pagination-list a:focus {
+.pagination-item:hover,
+.pagination-item:focus {
   background-color: #dfdfdf;
 }
 
-.pagination-list a:active {
+.pagination-item:active {
   background-color: #d5d5d5;
   color: #959595;
 }
 
-.pagination-navigation {
+.pagination-next {
   width: 260px;
   height: 35px;
   background-color: #eeeeee;
@@ -345,11 +351,6 @@ body {
   color: #000000;
 }
 
-.container {
-  width: 1200px;
-  margin: auto;
-}
-
 .catalog {
   padding-bottom: 110px;
 }
@@ -363,7 +364,6 @@ body {
 .slider {
   display: flex;
   justify-content: space-between;
-  margin: 0 120px;
 }
 
 .slider-wrapper1 {
@@ -417,21 +417,28 @@ body {
 
 .footer-maps {
   position: relative;
-  margin-top: 80px;
+  margin-top: 60px;
+}
+
+.footer-maps .container {
+    margin-top: -373px;
+    margin-bottom: 100px;
+    position: relative;
 }
 
 .footer-contacts {
   padding: 50px;
   width: 230px;
-  position: absolute;
-  top: 55px;
-  left: 140px;
 }
 
 .footer-bottom {
-  position: relative;
+  display: flex;
 }
 
+.footer-social-list {
+  display: flex;
+  padding: 0;
+}
 .social-vk {
   display: block;
   background-image: url("../img/vk-icon.svg");
@@ -466,10 +473,9 @@ body {
 }
 
 .footer-slogan {
-  position: absolute;
-  top: 0px;
-  right: 360px;
+  margin-left: 140px;
 }
+
 .address-wrapper {
   width: 210px;
   padding-bottom: 10px;
@@ -547,6 +553,34 @@ body {
   margin-top: 55px;
 }
 
+.sort-links a  {
+  color: #b2b2b2;
+}
+
+.sort-links a:hover,
+.sort-links a:focus {
+  color: #666666;
+}
+
+.sort-links a:active,
+.sort-links a.sort-link-current {
+  color: #000000;
+}
+
+.sort-links .icon-up,
+.sort-links .icon-down {
+  opacity: 0.2;
+}
+
+.sort-links .icon-up:hover,
+.sort-links .icon-down:hover {
+  opacity: 0.3;
+}
+
+.sort-links .icon-current {
+  opacity: 1;
+}
+
 .sort-links .icon-down {
   background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
@@ -561,11 +595,15 @@ body {
 .sort-links .icon-up {
   background-image: url("../img/icon-up-dir.svg");
   background-repeat: no-repeat;
-  opacity: 0.3;
   display: block;
   width: 11px;
   height: 10px;
   float: right;
   margin-left: 18px;
   margin-right: 0;
+}
+
+.pagination-list {
+  display: flex;
+  margin-top: 60px;
 }

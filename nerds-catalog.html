@@ -9,6 +9,7 @@
   </head>
   <body>
     <header class="main-header catalog">
+      <div class="container">
       <nav class="main-navigation">
         <a class="main-navigation-logo" href="index.html">
           <img src="img/nerds-logo.svg" alt="Логотип Нердс, переводящий на главную страницу">
@@ -24,6 +25,7 @@
         </ul>
       </nav>
       <h1 class="catalog-page">Магазин готовых шаблонов</h1>
+    </div>
     </header>
     <main class="container inner-page">
       <form method="post" class="main-form">
@@ -81,13 +83,13 @@
           Сортировать:
         </div>
         <div class="sort-links">
-            <a href="#">по цене</a>
+            <a href="#" class="sort-link-current">по цене</a>
             <a href="#">по типу</a>
             <a href="#">по названию</a>
           <a href="#" class="icon-up">
             <div class="visually-hidden">Вперед</div>
           </a>
-          <a href="#" class="icon-down">
+          <a href="#" class="icon-down icon-current">
             <div class="visually-hidden">Назад</div>
           </a>
         </div>
@@ -139,7 +141,7 @@
           <a href="#" class="button">9 900 руб.</a>
         </div>
       </div>
-    </div>
+
       <ul class="pagination-list">
         <li class="pagination-item pagination-item-current">
           <a href="#">1</a></li>
@@ -147,32 +149,37 @@
           <a href="#">2</a></li>
         <li class="pagination-item">
           <a href="#">3</a></li>
-        <li class="pagination-navigation">
+        <li class="pagination-item pagination-next">
           <a href="#">Следующая</a></li>
       </ul>
+    </div>
       </section>
     </main>
 
   <footer class="main-footer">
     <div class="footer-maps">
-      <div  class="footer-contacts">
-        <p class="address">Nёrds design studio</p>
-        <p>191186б, Санкт-Петербург,
-           ул. Б. Конюшенная, д. 19/8
-           тел.: +7(812)275-75-75
-        </p>
-        <div class="footer-button">
-          <button type="submit" class="button">Напишите нам</button>
+      <img src="img/map-marker.jpg" alt="Санкт-Петербург, ул. Б. Конюшенная, д. 19/8, тел.: +7(812)275-75-75">
+      <div class="container">
+        <div  class="footer-contacts">
+         <div class="address-wrapper">
+          <p class="address">Nёrds design studio</p>
+          <p>191186б, Санкт-Петербург,
+             ул. Б. Конюшенная, д. 19/8
+          <p class="telephone">тел.: +7(812)275-75-75</p>
+          </p>
+         </div>
+          <div class="footer-button">
+            <button type="submit" class="button">Напишите нам</button>
+          </div>
         </div>
       </div>
-     <img src="img/map-marker.jpg" alt="Санкт-Петербург,
-        ул. Б. Конюшенная, д. 19/8, тел.: +7(812)275-75-75">
     </div>
-    <div class="footer-bottom">
+    <div class="footer-bottom container">
     <div class="footer-social">
-      <ul cass="footer-social-list">
+      <ul class="footer-social-list">
         <li class="social-button">
-          <a href="#" class="social-vk"><p class="visually-hidden">Вконтакте</p></a>
+          <a href="#" class="social-vk">
+            <p class="visually-hidden">Вконтакте</p></a>
         </li>
         <li class="social-button">
           <a href="#" class="social-fb"><p class="visually-hidden">Фейсбук</p></a>
@@ -184,7 +191,7 @@
     </div>
     <div class="footer-slogan">
     <p class="strong">Давайте дружить, это выгодно!</p>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+    Скидка 10% для друзей из социальных сетей.
   </div>
   </div>
   </footer>
