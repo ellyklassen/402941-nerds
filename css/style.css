@@ -10,6 +10,7 @@ a {
   text-decoration: none;
 }
 
+
  .container {
   width: 1200px;
   margin: auto;
@@ -94,6 +95,12 @@ a {
 
  .main-navigation a:focus {
    color: #a6a6a6;
+ }
+
+ .main-navigation a:active,
+ .main-navigation .current {
+   color: #000000;
+   border-bottom: 2px solid #fb565a;
  }
 
  .main-navigation a:active,
@@ -203,6 +210,7 @@ a {
  .partner:visited  {
    opacity: 0.1;
  }
+
 /*Стили шаблонов сайтов*/
 
  .examples .button {
@@ -319,8 +327,11 @@ a {
 }
 
 /*visually-hidden*/
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
 	position: absolute !important;
+
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 	padding:0 !important;
@@ -339,7 +350,8 @@ body {
 .main-navigation {
   display: flex;
   justify-content: space-between;
-  padding: 45px 20px;
+  flex-wrap: wrap;
+  padding-top: 45px;
   margin: auto;
   width: 1200px;
 }
@@ -348,17 +360,40 @@ body {
   text-align: center;
   font-size: 55px;
   line-height: 55px;
+  margin-left: 80px;
   color: #000000;
 }
 
 .catalog {
-  padding-bottom: 110px;
+  padding-bottom: 80px;
 }
 
 .site-navigation {
   display: flex;
   width: 440px;
   justify-content: space-between;
+}
+
+.user-navigation {
+  display: flex;
+}
+
+.user-navigation .user-basket {
+  position: relative;
+}
+
+.user-basket::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .slider {
@@ -418,6 +453,11 @@ body {
 .footer-maps {
   position: relative;
   margin-top: 60px;
+}
+
+.footer-maps img {
+  display: block;
+  margin: 0 auto;
 }
 
 .footer-maps .container {
