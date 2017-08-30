@@ -58,7 +58,7 @@ a {
    width: 80px;
    height: 80px;
    background-color: #e1e1e1;
-   margin: 10px;
+   margin-right: 12px;
    border-radius: 50%;
  }
 
@@ -261,8 +261,12 @@ a {
 }
 /*Стили для перехода по страницам*/
 .pagination-list {
+  display: flex;
+
   padding: 0;
+  margin: 60px 0;
 }
+
 .pagination-list a {
   color: #000000;
   font-size: 16px;
@@ -274,9 +278,10 @@ a {
   height: 35px;
   width: 50px;
   background: #eeeeee;
-  margin: 10px;
+  margin-right: 11px;
   text-align: center;
   padding-top: 15px;
+  border-radius: 2px;
 }
 
 .pagination-item-current {
@@ -310,6 +315,8 @@ a {
   font-size: 36px;
   line-height: 36px;
   text-transform: none;
+  margin: 0;
+  margin-bottom: 13px;
 }
 
 .footer-contacts {
@@ -446,7 +453,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 1160px;
-  padding: 10px 30px;
+  padding: 10px 20px;
   align-items: center;
 }
 
@@ -455,29 +462,35 @@ body {
   margin-top: 60px;
 }
 
-.footer-maps img {
-  display: block;
+.footer-maps {
   margin: 0 auto;
+  height: 416px;
+  background-image: url("../img/map-marker.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #b5b5b6;
+  background-position: center;
 }
 
 .footer-maps .container {
-    margin-top: -373px;
-    margin-bottom: 100px;
-    position: relative;
+    display: flex;
 }
 
 .footer-contacts {
+  margin-top: 54px;
   padding: 50px;
   width: 230px;
 }
 
 .footer-bottom {
   display: flex;
+  margin: 69px auto;
 }
 
 .footer-social-list {
   display: flex;
   padding: 0;
+  margin: 0;
 }
 .social-vk {
   display: block;
@@ -514,6 +527,7 @@ body {
 
 .footer-slogan {
   margin-left: 140px;
+  margin-top: 10px;
 }
 
 .address-wrapper {
@@ -641,9 +655,4 @@ body {
   float: right;
   margin-left: 18px;
   margin-right: 0;
-}
-
-.pagination-list {
-  display: flex;
-  margin-top: 60px;
 }
