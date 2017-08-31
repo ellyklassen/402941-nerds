@@ -29,12 +29,26 @@
     </header>
     <main class="container inner-page">
       <form method="post" class="main-form">
-        <div class="form">
          <h3>Стоимость:</h3>
-         <label class="form-variant">
-          от<input type="range" name="price" min="0" max="15000">до
-         </label>
-        </div>
+         <div class="range-filter">
+           <div class="range-controls">
+             <div class="scale">
+               <div class="bar" style="width: 70%"></div>
+             </div>
+             <div class="toggle toggle-min"></div>
+             <div class="toggle toggle-max"></div>
+           </div>
+           <div class="price-controls">
+             <label for="min-price">
+               от
+               <input name="min-price" class="min-price" type="text" value="0">
+             </label>
+             <label for="max-price">
+               до
+               <input name="max-price" class="max-price" type="text" value="15 000">
+             </label>
+           </div>
+         </div>
         <div class="form">
          <h3>Сетка:</h3>
          <label class="form-variant">
@@ -164,7 +178,7 @@
           <p class="address">Nёrds design studio</p>
           <p>191186б, Санкт-Петербург,
              ул. Б. Конюшенная, д. 19/8
-          <p class="telephone">тел.: +7(812)275-75-75</p>
+          <p>тел.: +7(812)275-75-75</p>
           </p>
          </div>
           <div class="footer-button">
