@@ -39,6 +39,7 @@ a {
 
 .main-header {
   background-color: #eeeeee;
+  min-width: 1200px;
 }
 
 .main-header .button {
@@ -419,7 +420,7 @@ a {
 
 .partners {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 
   width: 1160px;
   padding: 10px 0;
@@ -430,6 +431,33 @@ a {
   border-bottom: 2px solid #eeeeee;
 }
 
+ .partners .htmlacademy {
+   background-image: url("../img/partnerhtmlacademy.png");
+   background-repeat: no-repeat;
+   width: 199px;
+   height: 68px;
+ }
+
+ .partners .borodinski {
+   background-image: url("../img/partnerborodinski.png");
+   background-repeat: no-repeat;
+   width: 290px;
+   height: 90px;
+ }
+
+ .partners .pink {
+   background-image: url("../img/partnerpink.png");
+   background-repeat: no-repeat;
+   width: 185px;
+   height: 52px;
+ }
+
+ .partners .mishka {
+   background-image: url("../img/partnermishka.png");
+   background-repeat: no-repeat;
+   width: 173px;
+   height: 84px;
+ }
  .partner {
    opacity: 0.2;
  }
@@ -446,6 +474,10 @@ a {
 
  /*-----MAIN-FOOTER-----*/
 
+.main-footer {
+  min-width: 1200px;
+}
+
  .main-footer .strong {
    font-size: 36px;
    line-height: 36px;
@@ -461,7 +493,7 @@ a {
    margin: 0 auto;
 
    height: 416px;
-   width: 1440px;
+   max-width: 1440px;
    background-image: url("../img/map-marker.jpg");
    background-repeat: no-repeat;
    background-size: cover;
