@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <header class="main-header catalog">
-      <div class="container">
-      <nav class="main-navigation">
-        <a class="main-navigation-logo" href="index.html">
-          <img src="img/nerds-logo.svg" alt="Логотип Нердс, переводящий на главную страницу">
-        </a>
-        <ul class="site-navigation">
-          <li><a href="index.html">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="#" class="current">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <ul class="user-navigation">
-          <li><a href="#" class="user-basket">Корзина</a></li>
-        </ul>
-      </nav>
-      <h1 class="catalog-page">Магазин готовых шаблонов</h1>
-    </div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Нёрдс</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+ <header class="main-header catalog">
+  <div class="container">
+   <nav class="main-navigation">
+    <a class="main-navigation-logo" href="index.html">
+      <img src="img/nerds-logo.svg" alt="Логотип Нердс, переводящий на главную страницу">
+    </a>
+    <ul class="site-navigation">
+     <li>
+       <a href="index.html">Студия</a>
+     </li>
+     <li>
+       <a href="#">Клиенты</a>
+     </li>
+     <li>
+       <a href="#" class="current">Магазин</a>
+     </li>
+     <li>
+       <a href="#">Контакты</a>
+     </li>
+    </ul>
+    <ul class="user-navigation">
+      <li>
+        <a href="#" class="user-basket">Корзина</a>
+      </li>
+    </ul>
+   </nav>
+    <h1 class="catalog-page">Магазин готовых шаблонов</h1>
+ </div>
+</header>
     <main class="container inner-page">
       <form method="post" class="main-form">
          <h3>Стоимость:</h3>
          <div class="range-filter">
            <div class="range-controls">
-             <div class="scale">
-               <div class="bar" style="width: 70%"></div>
-             </div>
-             <div class="toggle toggle-min"></div>
-             <div class="toggle toggle-max"></div>
+              <div class="scale">
+                <div class="bar" style="width: 70%"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
            </div>
            <div class="price-controls">
              <label for="min-price">
@@ -49,45 +59,36 @@
              </label>
            </div>
          </div>
+         <div class="form">
+          <h3>Сетка:</h3>
+           <input type="radio" id="grid-1" name="grid" value="adaptive" checked>
+           <label for="grid-1" class="radiobox">Адаптивная</label>
+
+           <input type="radio" id="grid-2" name="grid" value="fixed">
+           <label for="grid-2" class="radiobox">Фиксированная</label>
+
+           <input type="radio" id="grid-3" name="grid" value="reflowable">
+           <label for="grid-3" class="radiobox">Резиновая</label>
+        </div>
         <div class="form">
-         <h3>Сетка:</h3>
-         <label class="form-variant">
-          <input type="radio" name="grid" value="adaptive" checked>
-          Адаптивная
-         </label>
-         <label class="form-variant">
-          <input type="radio" name="grid" value="fixed">
-          Фиксированная
-         </label>
-        <label class="form-variant">
-         <input type="radio" name="grid" value="reflowable">
-         Резиновая
-        </label>
+         <h3>Особенности:</h3>
+          <input type="checkbox" name="features" id="checkbox-1" checked>
+          <label for="checkbox-1" class="checkbox">Слайдер</label>
+
+          <input type="checkbox" name="features" id="checkbox-2">
+          <label for="checkbox-2" class="checkbox">Блок преимуществ</label>
+
+          <input type="checkbox" name="features"  id="checkbox-3" checked>
+          <label for="checkbox-3" class="checkbox">Новости</label>
+
+          <input type="checkbox" name="features" id="checkbox-4">
+          <label for="checkbox-4" class="checkbox">Галерея</label>
+
+         <input type="checkbox" name="features" id="checkbox-5">
+         <label for="checkbox-5" class="checkbox">Корзина</label>
+
+        <button type="submit" class="button">Показать</button>
       </div>
-      <div class="form">
-       <h3>Особенности:</h3>
-       <label class="form-variant">
-         <input type="checkbox" name="features" checked>
-         Слайдер
-       </label>
-       <label class="form-variant">
-         <input type="checkbox" name="features">
-         Блок преимуществ
-       </label>
-       <label class="form-variant">
-         <input type="checkbox" name="features" checked>
-         Новости
-       </label>
-       <label class="form-variant">
-         <input type="checkbox" name="features">
-         Галерея
-       </label>
-       <label class="form-variant">
-         <input type="checkbox" name="features">
-         Корзина
-       </label>
-       <button type="submit" class="button">Показать</button>
-     </div>
     </form>
 
     <section class="examples">
@@ -177,9 +178,8 @@
          <div class="address-wrapper">
           <p class="address">Nёrds design studio</p>
           <p>191186б, Санкт-Петербург,
-             ул. Б. Конюшенная, д. 19/8
+             ул. Б. Конюшенная, д. 19/8</p>
           <p>тел.: +7(812)275-75-75</p>
-          </p>
          </div>
           <div class="footer-button">
             <button type="submit" class="button">Напишите нам</button>
@@ -191,13 +191,13 @@
     <div class="footer-social">
       <ul class="footer-social-list">
         <li class="social-button">
-          <a href="#" class="social-vk" title="Вконтакте"></a>
+          <a href="#" class="social social-vk" title="Вконтакте"></a>
         </li>
         <li class="social-button">
-          <a href="#" class="social-fb" title="Фейсбук"></a>
+          <a href="#" class="social social-fb" title="Фейсбук"></a>
         </li>
         <li class="social-button">
-          <a href="#" class="social-ig" title="Инстаграм"></a>
+          <a href="#" class="social social-ig" title="Инстаграм"></a>
         </li>
       </ul>
     </div>

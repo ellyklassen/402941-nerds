@@ -3,7 +3,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  min-width: 1140px;
+  min-width: 1160px;
 
   font-family: "Roboto", Arial, sans-serif;
   color: #353e42;
@@ -87,10 +87,14 @@ a {
   border-bottom: 2px solid #fb565a;
 }
 
-.main-navigation a:active,
-.main-navigation .current {
-  color: #000000;
-  border-bottom: 2px solid #fb565a;
+.main-navigation-logo:hover,
+.main-navigation-logo:focus {
+  opacity: 0.8;
+}
+
+.main-navigation-logo:active {
+  opacity: 0.3;
+  border-bottom: none;
 }
 
 /*-----SITE-NAVIGATION-----*/
@@ -164,7 +168,7 @@ a {
 #btn-1:checked ~ .slider-controls label[for=btn-1],
 #btn-2:checked ~ .slider-controls label[for=btn-2],
 #btn-3:checked ~ .slider-controls label[for=btn-3] {
-  background-color: #c1c1c1;
+  box-shadow: inset 0 0 0 2px #c1c1c1;
 }
 
 .slide {
@@ -218,7 +222,6 @@ a {
 
 .slide .button {
   display: inline-block;
-  width: 185px;
   text-align: center;
   padding: 20px 55px;
   margin-top: 40px;
@@ -265,8 +268,9 @@ a {
 .products-list .button {
   padding: 17px 40px;
 }
-.products-list .button:active {
-  color: #e37376;
+
+.products-list .btn-title:active {
+  opacity: 0.3;
 }
 
 .products-list .button-1 {
@@ -280,6 +284,7 @@ a {
 
 .products-list .button-1:active {
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 0 #c13135;
 }
 
 .products-list .button-2 {
@@ -293,6 +298,7 @@ a {
 
 .products-list .button-2:active {
   background-color: #00aa62;
+  box-shadow: inset 0 3px 0 0 #009958;
 }
 
 .products-list .button-3 {
@@ -306,6 +312,7 @@ a {
 
 .products-list .button-3:active {
   background-color: #e5a722;
+  box-shadow: inset 0 3px 0 0 #ce961f;
 }
  /*-----PRODUCTS-ITEM------*/
 
@@ -331,7 +338,6 @@ a {
    position: relative;
    border-top: 2px solid #eeeeee;
    height: 523px;
-   margin-bottom: 70px;
  }
 
  .features-description {
@@ -431,40 +437,13 @@ a {
   border-bottom: 2px solid #eeeeee;
 }
 
- .partners .htmlacademy {
-   background-image: url("../img/partnerhtmlacademy.png");
-   background-repeat: no-repeat;
-   width: 199px;
-   height: 68px;
- }
-
- .partners .borodinski {
-   background-image: url("../img/partnerborodinski.png");
-   background-repeat: no-repeat;
-   width: 290px;
-   height: 90px;
- }
-
- .partners .pink {
-   background-image: url("../img/partnerpink.png");
-   background-repeat: no-repeat;
-   width: 185px;
-   height: 52px;
- }
-
- .partners .mishka {
-   background-image: url("../img/partnermishka.png");
-   background-repeat: no-repeat;
-   width: 173px;
-   height: 84px;
- }
  .partner {
    opacity: 0.2;
  }
 
  .partner:hover,
  .partner:focus {
-   opacity: 1;
+  opacity: 1;
  }
 
  .partner:active,
@@ -548,10 +527,13 @@ a {
  }
 
  .social-button {
-   width: 80px;
-   height: 80px;
+    margin-right: 12px;
+ }
+
+ .social {
+   width: 79px;
+   height: 79px;
    background-color: #e1e1e1;
-   margin-right: 12px;
    border-radius: 50%;
  }
 
@@ -560,10 +542,9 @@ a {
    background-image: url("../img/vk-icon.svg");
    background-repeat: no-repeat;
    background-position: center;
-   width: 26px;
-   height: 28px;
+
    margin: auto;
-   padding-top: 50px;
+
  }
 
  .social-fb {
@@ -571,10 +552,9 @@ a {
    background-image: url("../img/fb-icon.svg");
    background-repeat: no-repeat;
    background-position: center;
-   width: 26px;
-   height: 28px;
+
    margin: auto;
-   padding-top: 50px;
+
  }
 
  .social-ig {
@@ -582,10 +562,9 @@ a {
    background-image: url("../img/insta-icon.svg");
    background-repeat: no-repeat;
    background-position: center;
-   width: 26px;
-   height: 28px;
+
    margin: auto;
-   padding-top: 50px;
+
  }
 
  .footer-slogan {
@@ -691,8 +670,94 @@ a {
   white-space: nowrap;
 }
 
-.form-variant {
-  padding: 10px;
+.radiobox {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 35px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+input[type=radio] {
+  display: none; /*-------RADIOBUTTON CAN'T TAB because display is hide, don't forget to fixed it!----*/
+}
+
+.radiobox::before {
+  content: "";
+  display: inline-block;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+}
+
+.radiobox:before:checked {
+  content: "";
+  display: inline-block;
+
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+}
+
+.checkbox {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 35px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+input[type=checkbox] {
+  display: none; /*-------checkbox CAN'T TAB because display is hide, don't forget to fixed it!----*/
+}
+
+.checkbox::before {
+  content: "";
+  display: inline-block;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+}
+
+.checkbox::before:checked {
+  content: "";
+  display: inline-block;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
 }
 
 .form .button {
@@ -787,9 +852,13 @@ a.sort-link-current {                                      /*!!!!!!!!!Аля, и
 /*-----EXAMPLES-----*/
 
 .examples .button {
-  padding: 17px 60px 17px 60px;
+  display: inline-block;
   text-align: center;
+
+  padding: 18px 60px;
+  margin-top: 30px;
 }
+
 .examples .button:hover,
 .examples .button:focus {
   background-color: #e74246;
@@ -809,15 +878,27 @@ a.sort-link-current {                                      /*!!!!!!!!!Аля, и
 }
 
 .template {
-  width: 360px;
-  height: 616px;
   position: relative;
-  margin-top: 33px;
+  width: 360px;
+  height: 575px;
+
+  margin-bottom: 33px;
   padding-top: 40px;
-  background-image: url("../img/browser.svg");
+  background-image: url("../img/browser-off.svg");
+  background-repeat: no-repeat;
 }
 
 .template-description {
+  display: none;
+}
+
+ .template:hover {
+   background-image: url("../img/browser-on.svg");
+   background-repeat: no-repeat;
+ }
+
+ .template:hover .template-description {
+  display: block;
   position: absolute;
   bottom: 0;
   width: 360px;
@@ -839,7 +920,8 @@ a.sort-link-current {                                      /*!!!!!!!!!Аля, и
   display: flex;
 
   padding: 0;
-  margin: 60px 0;
+  margin-top: 27px;
+  margin-bottom: 60px;
 }
 
 .pagination-list a {
@@ -885,19 +967,24 @@ a.sort-link-current {                                      /*!!!!!!!!!Аля, и
   padding-top: 15px;
 }
 
+/*-----TEXT-DECORATION-----*/
 
+.strong {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
 
-/*visually-hidden*/
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-	position: absolute;
+/*-----VISUALLY-HIDDEN-----*/
+.visually-hidden {
+ position: absolute;
 
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
+ width: 1px;
+ height: 1px;
+ margin: -1px;
+ border: 0;
+ padding: 0;
+
+ clip: rect(0 0 0 0);
+ overflow: hidden;
 }
