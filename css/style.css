@@ -18,6 +18,7 @@ a {
 /*-----BUTTONS-----*/
 
 .button {
+  display: inline-block;
   color: #ffffff;
   background-color: #fb565a;
   text-transform: uppercase;
@@ -236,6 +237,7 @@ a {
 .slide .button:active {
   color: #e26c6e;
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 0 #c13135;
 }
 
 .slide .slide-title {
@@ -537,6 +539,15 @@ a {
    border-radius: 50%;
  }
 
+ .social:hover,
+ .social:focus {
+   background-color: #e74246;
+ }
+
+.social:active{
+  background-color: #d7373b;
+}
+
  .social-vk {
    display: block;
    background-image: url("../img/vk-icon.svg");
@@ -691,6 +702,7 @@ input[type=radio] {
 
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
+  opacity: 0.4;
   width: 25px;
   height: 25px;
 
@@ -700,19 +712,33 @@ input[type=radio] {
   bottom: 1px;
 }
 
-.radiobox:before:checked {
-  content: "";
-  display: inline-block;
-
+.grid:checked + .radiobox::before{
   background-image: url("../img/radio-on.svg");
-  background-repeat: no-repeat;
-  width: 25px;
-  height: 25px;
+  opacity: 0.4;
+}
 
-  margin-right: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 1px;
+.radiobox:hover::before,
+.radiobox:focus::before {
+  background-image: url("../img/radio-off.svg");
+  opacity: 1;
+}
+
+.grid:checked + .radiobox:hover::before,
+.grid:checked + .radiobox:focus::before {
+  background-image: url("../img/radio-on.svg");
+  opacity: 1;
+}
+
+.radiobox:disabled::before {
+  background-image: url("../img/radio-off.svg");
+  opacity: 0.1;
+  cursor: default;
+}
+
+.grid:checked:disabled + .radiobox::before {
+  background-image: url("../img/radio-on.svg");
+  opacity: 0.1;
+  cursor: default;
 }
 
 .checkbox {
@@ -736,6 +762,7 @@ input[type=checkbox] {
 
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
+  opacity: 0.4;
   width: 23px;
   height: 23px;
 
@@ -745,22 +772,37 @@ input[type=checkbox] {
   bottom: 1px;
 }
 
-.checkbox::before:checked {
-  content: "";
-  display: inline-block;
-
+.features-checkbox:checked + .checkbox::before {
   background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
-  width: 23px;
-  height: 23px;
+  opacity: 0.4;
+}
 
-  margin-right: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 1px;
+.checkbox:hover::before,
+.checkbox:focus::before {
+  background-image: url("../img/checkbox-off.svg");
+  opacity: 1;
+}
+
+.features-checkbox:checked + .checkbox:hover::before,
+.features-checkbox:checked + .checkbox:focus::before {
+  background-image: url("../img/checkbox-on.svg");
+  opacity: 1;
+}
+
+.checkbox:disabled::before {
+  background-image: url("../img/checkbox-off.svg");
+  opacity: 0.1;
+  cursor: default;
+}
+
+.features-checkbox:checked:disabled + .checkbox::before {
+  background-image: url("../img/checkbox-on.svg");
+  opacity: 0.1;
+  cursor: default;
 }
 
 .form .button {
+  display: inline-block;
   color: #000000;
   background-color: #eeeeee;
   padding: 20px 88px;
@@ -774,7 +816,8 @@ input[type=checkbox] {
 
 .form .button:active {
   color: #959595;
-  background-color: rgba(213, 213, 213, 0.3)
+  background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
 
 /*-----SORT OF EXAMPLES-----*/
@@ -790,12 +833,12 @@ input[type=checkbox] {
   margin-bottom: 26px;
 }
 
-.sort-links {
+.sort-categories {
   width: 360px;
   margin-top: 55px;
 }
 
-.sort-links a {
+.sort-links  {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
@@ -803,31 +846,31 @@ input[type=checkbox] {
   margin-right: 25px;
 }
 
-.sort a:hover,
-.sort a:focus {
+.sort-links:hover,
+.sort-links:focus {
   color: #666666;
 }
 
-.sort-links a:active,
-a.sort-link-current {                                      /*!!!!!!!!!Аля, исправь этот УЖАС ПЕРЕД ОТПРАВКОЙ!!!!*/
+.sort-links:active,
+.sort-link-current {
   color: #000000;
 }
 
-.sort-links .icon-up,
-.sort-links .icon-down {
+.sort-categories .icon-up,
+.sort-categories .icon-down {
   opacity: 0.2;
 }
 
-.sort-links .icon-up:hover,
-.sort-links .icon-down:hover {
+.sort-categories .icon-up:hover,
+.sort-categories .icon-down:hover {
   opacity: 0.3;
 }
 
-.sort-links .icon-current {
+.sort-categories .icon-current {
   opacity: 1;
 }
 
-.sort-links .icon-down {
+.sort-categories .icon-down {
   background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
   display: block;
@@ -838,7 +881,7 @@ a.sort-link-current {                                      /*!!!!!!!!!Аля, и
   margin-right: 0;
 }
 
-.sort-links .icon-up {
+.sort-categories .icon-up {
   background-image: url("../img/icon-up-dir.svg");
   background-repeat: no-repeat;
   display: block;
@@ -931,8 +974,8 @@ a.sort-link-current {                                      /*!!!!!!!!!Аля, и
   font-weight: 500;
 }
 
-
 .pagination-item {
+  display: block;
   height: 35px;
   width: 50px;
   background: #eeeeee;
@@ -944,7 +987,7 @@ a.sort-link-current {                                      /*!!!!!!!!!Аля, и
 
 .pagination-item-current {
   background-color: #ffffff;
-  outline: 3px solid #dbdbdb;
+  border: 3px solid #dbdbdb;
   width: 47px;
   height: 32px;
 }
@@ -973,6 +1016,7 @@ a.sort-link-current {                                      /*!!!!!!!!!Аля, и
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
+  color: #000000;
 }
 
 /*-----VISUALLY-HIDDEN-----*/
@@ -987,4 +1031,79 @@ a.sort-link-current {                                      /*!!!!!!!!!Аля, и
 
  clip: rect(0 0 0 0);
  overflow: hidden;
+}
+
+/*-------POPUP-----*/
+
+.popup-feedback {
+  width: 840px;
+  height: 590px;
+  box-shadow: 0 0 20px 0 #000000;
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-wrapper {
+  width: 766px;
+  padding: 70px 20px 84px;
+}
+
+.popup-title {
+  font-size: 45px;
+  line-height: 45px;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.popup .name,
+.popup .email {
+ display: block;
+
+ width: 344px;
+ height: 46px;
+ border: 2px solid #d7dcde;
+
+ padding-left: 14px;
+ margin-top: 12px;
+}
+
+.popup-name {
+  float: left;
+  margin-right: 40px;
+}
+
+.popup-email {
+  float: left;
+}
+
+.popup label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.feedback-text {
+  clear: both;
+  padding-top: 35px;
+}
+
+.feedback-text .textarea {
+  width: 746px;
+  height: 101px;
+
+  margin-top: 12px;
+  padding-top: 13px;
+  padding-left: 13px;
+
+  border: 2px solid #d7dcde;
+}
+
+.btn-popup {
+  padding: 18px 82px;
+  margin-top: 47px;
+  margin-bottom: 84px;
 }
