@@ -15,18 +15,10 @@
       <img src="img/nerds-logo.svg" alt="Логотип Нердс, переводящий на главную страницу">
     </a>
     <ul class="site-navigation">
-     <li>
-       <a href="index.html">Студия</a>
-     </li>
-     <li>
-       <a href="#">Клиенты</a>
-     </li>
-     <li>
-       <a href="#" class="current">Магазин</a>
-     </li>
-     <li>
-       <a href="#">Контакты</a>
-     </li>
+     <li><a href="index.html">Студия</a></li>
+     <li><a href="#">Клиенты</a></li>
+     <li><a href="#" class="current">Магазин</a></li>
+     <li><a href="#">Контакты</a></li>
     </ul>
     <ul class="user-navigation">
       <li>
@@ -51,17 +43,17 @@
            <div class="price-controls">
              <label for="min-price">
                от
-               <input name="min-price" class="min-price" type="text" value="0">
+               <input name="min-price" class="min-price" type="text" value="0" id="min-price">
              </label>
              <label for="max-price">
                до
-               <input name="max-price" class="max-price" type="text" value="15 000">
+               <input name="max-price" class="max-price" type="text" value="15 000" id="max-price">
              </label>
            </div>
          </div>
          <div class="form">
             <h3>Сетка:</h3>
-           <input type="radio" id="grid-1" class="grid" value="adaptive" name="grid" checked>
+           <input type="radio" id="grid-1" class="grid" value="adaptive" name="grid" checked tabindex="0">
            <label for="grid-1" class="radiobox">Адаптивная</label>
 
            <input type="radio" id="grid-2" class="grid" name="grid" value="fixed">
@@ -93,7 +85,7 @@
 
     <section class="examples">
       <h2 class="visually-hidden">Примеры готовых сайтов</h2>
-      <div class="template-examples">
+      <div class="sorting">
         <div class="sort">
           Сортировать:
         </div>
@@ -108,6 +100,9 @@
              <div class="visually-hidden">Назад</div>
             </a>
         </div>
+      </div>
+
+      <div class="template-examples">
       <div class="template">
           <img src="img/img-sedona.jpg" alt="Шаблон сайта Седона">
         <div class="template-description">
@@ -168,6 +163,7 @@
          </div>
         </div>
       </div>
+      </div>
 
       <ul class="pagination-list">
         <li>
@@ -183,12 +179,17 @@
           <a href="#" class="pagination-item pagination-next">Следующая</a>
         </li>
       </ul>
-    </div>
+
       </section>
     </main>
 
   <footer class="main-footer">
     <div class="footer-maps">
+      <h3 class="visually-hidden">Найдите нас на карте</h3>
+      <iframe class="iframemap"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123807!2d30.32089461587174!3d59.938796869048204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1504593950821"
+      allowfullscreen>
+     </iframe>
       <div class="container">
         <div  class="footer-contacts">
          <div class="address-wrapper">
@@ -198,9 +199,32 @@
           <p>тел.: +7(812)275-75-75</p>
          </div>
           <div class="footer-button">
-            <button type="submit" class="button">Напишите нам</button>
+            <button type="submit" class="button footer-btn">Напишите нам</button>
           </div>
         </div>
+        <section class="feedback">
+            <div class="popup-feedback">
+            <form action="#" method="post" class="popup-form">
+              <div class="popup-title">
+                <h2 class="popup-title">Напишите нам</h2>
+              </div>
+             <div class="popup popup-name">
+               <label for="name" class="name-label">Ваше имя:</label>
+               <input class="name" type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+             </div>
+             <div class="popup popup-email">
+               <label for="email" class="email-label">Ваш e-mail:</label>
+               <input class="email" type="text" id="email" name="email" placeholder="Для отправки ответа">
+              </div>
+              <div class="popup feedback-text">
+               <label for="textarea">Текс письма:</label>
+               <textarea class="textarea" id="textarea" name="text" placeholder="В свободной форме"></textarea>
+              </div>
+              <button type="submit" class="button btn-popup">Отправить</button>
+             </form>
+            <button class="popup-btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+           </div>
+        </section>
       </div>
     </div>
     <div class="footer-bottom container">
@@ -223,26 +247,5 @@
   </div>
   </div>
   </footer>
-
-  <div class="popup-feedback">
-    <div class="popup-wrapper">
-    <form action="#" method="post" class="popup-form">
-      <h2 class="popup-title">Напишите нам</h2>
-     <div class="popup popup-name">
-       <label for="name">Ваше имя:</label>
-       <input class="name" type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
-     </div>
-     <div class="popup popup-email">
-       <label for="email">Ваш e-mail:</label>
-       <input class="email" type="text" id="email" name="email" placeholder="Для отправки ответа">
-      </div>
-      <div class="popup feedback-text">
-       <label for="textarea">Текс письма:</label>
-       <textarea class="textarea" id="textarea" name="text" placeholder="В свободной форме"></textarea>
-      </div>
-      <button type="submit" class="button btn-popup">Отправить</button>
-    </form>
-  </div>
-  </div>
 </body>
 </html>
