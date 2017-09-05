@@ -900,13 +900,11 @@ input[type=checkbox] {
   line-height: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  width: 360px;
   margin-top: 55px;
-  margin-bottom: 26px;
 }
 
 .sort-categories {
-  width: 360px;
+  display: flex;
   margin-top: 55px;
 }
 
@@ -915,7 +913,7 @@ input[type=checkbox] {
   font-size: 14px;
   line-height: 18px;
   color: #b2b2b2;
-  margin-right: 25px;
+  margin-right: 14px;
 }
 
 .sort-links:hover,
@@ -987,9 +985,11 @@ input[type=checkbox] {
 
 .template-examples {
   display: flex;
-  width: 760px;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  width: 760px;
+  margin-top: 25px;
 }
 
 .template {
