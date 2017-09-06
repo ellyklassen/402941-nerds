@@ -19,6 +19,7 @@ a {
 
 .button {
   display: inline-block;
+  vertical-align: top;
   color: #ffffff;
   background-color: #fb565a;
   text-transform: uppercase;
@@ -75,20 +76,6 @@ a {
   text-transform: uppercase;
 }
 
-.main-navigation a:hover {
-  color: #fb565a;
-}
-
-.main-navigation a:focus {
-  color: #a6a6a6;
-}
-
-.main-navigation a:active,
-.main-navigation .current {
-  color: #000000;
-  border-bottom: 2px solid #fb565a;
-}
-
 .catalog .main-navigation-logo:hover,
 .catalog .main-navigation-logo:focus {
   opacity: 0.8;
@@ -99,7 +86,7 @@ a {
   border-bottom: none;
 }
 
-/*-----SITE-NAVIGATION-----*/
+/*-----SITE-NAVIGATION/-/USER-NAVIGATION-----*/
 
 .site-navigation {
   display: flex;
@@ -109,9 +96,22 @@ a {
   margin-right: 41px;
 }
 
+.site-navigation-link:hover,
+.user-basket:hover {
+  color: #fb565a;
+}
 
+.site-navigation-link:focus,
+.user-basket:focus {
+  color: #a6a6a6;
+}
 
-/*-----USER-NAVIGATION-----*/
+.site-navigation-link:active,
+.user-basket:active,
+.site-navigation-link .current {
+  color: #000000;
+  border-bottom: 2px solid #fb565a;
+}
 
 .user-navigation {
   display: flex;
@@ -161,6 +161,7 @@ a {
 
 .slider-controls label {
   display: inline-block;
+  vertical-align: top;
   width: 8px;
   height: 8px;
   margin: 0 5px;
@@ -229,6 +230,7 @@ a {
 
 .slide .button {
   display: inline-block;
+  vertical-align: top;
   text-align: center;
   padding: 20px 55px 15px 55px;
   margin-top: 36px;
@@ -478,7 +480,7 @@ a {
    margin: 0 auto;
 
    height: 416px;
-   max-width: 1440px;
+   max-width: 1440px;*/
    background-image: url("../img/map-marker.jpg");
    background-repeat: no-repeat;
    background-size: cover;
@@ -491,7 +493,7 @@ a {
  }
 
  .iframemap  {
-   width: 1440px;
+   width: 100%;
    height: 416px;
    border: 0;
    position: absolute;
@@ -746,6 +748,7 @@ a {
 
 .radiobox {
   display: inline-block;
+  vertical-align: top;
   cursor: pointer;
   position: relative;
   padding-left: 35px;
@@ -753,10 +756,11 @@ a {
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 20px;
+  outline: none;
 }
 
 input[type=radio] {
-  display: none; /*-------RADIOBUTTON CAN'T TAB because display is hide, don't forget to fixed it!----*/
+  display: none;
 }
 
 .radiobox::before {
@@ -806,6 +810,7 @@ input[type=radio] {
 
 .checkbox {
   display: inline-block;
+  vertical-align: top;
   cursor: pointer;
   position: relative;
   padding-left: 35px;
@@ -813,10 +818,11 @@ input[type=radio] {
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 20px;
+  outline: none;
 }
 
 input[type=checkbox] {
-  display: none; /*-------checkbox CAN'T TAB because display is hide, don't forget to fixed it!----*/
+  display: none;
 }
 
 .checkbox::before {
@@ -866,20 +872,21 @@ input[type=checkbox] {
   cursor: default;
 }
 
-.form .button {
+.main-form .button {
   display: inline-block;
+  vertical-align: top;
   color: #000000;
   background-color: #eeeeee;
   padding: 20px 88px;
   margin-top: 18px;
 }
 
-.form .button:hover,
-.form .button:focus {
+.main-form .button:hover,
+.main-form .button:focus {
   background-color: #dfdfdf;
 }
 
-.form .button:active {
+.main-form .button:active {
   color: #959595;
   background-color: #d5d5d5;
   box-shadow: inset 0 3px 0 0 #bfbfbf;
@@ -926,6 +933,10 @@ input[type=checkbox] {
   color: #000000;
 }
 
+.icon-down-up {
+  display: flex;
+}
+
 .sort-categories .icon-up,
 .sort-categories .icon-down {
   opacity: 0.2;
@@ -946,7 +957,6 @@ input[type=checkbox] {
   display: block;
   width: 11px;
   height: 10px;
-  float: right;
   margin-left: 17px;
   margin-right: 0;
 }
@@ -957,15 +967,16 @@ input[type=checkbox] {
   display: block;
   width: 11px;
   height: 10px;
-  float: right;
   margin-left: 18px;
   margin-right: 0;
 }
+
 
 /*-----EXAMPLES-----*/
 
 .examples .button {
   display: inline-block;
+  vertical-align: top;
   text-align: center;
 
   padding: 18px 60px;
@@ -1010,6 +1021,7 @@ input[type=checkbox] {
  .template:hover {
    background-image: url("../img/browser-on.svg");
    background-repeat: no-repeat;
+   width: 360px;
  }
 
  .template:hover .template-description {
@@ -1027,6 +1039,11 @@ input[type=checkbox] {
   color: #000000;
   font-size: 18px;
   line-height: 30px;
+}
+
+.template-description-text {
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 /*------PAGINATION-LIST AND ITEMS-----*/
@@ -1048,20 +1065,22 @@ input[type=checkbox] {
 
 .pagination-item {
   display: block;
+  text-align: center;
+
   height: 35px;
   width: 50px;
   background: #eeeeee;
-  margin-right: 11px;
-  text-align: center;
-  padding-top: 15px;
   border-radius: 2px;
+
+  margin-right: 11px;
+  padding-top: 15px;
 }
 
 .pagination-item-current {
   background-color: #ffffff;
-  border: 3px solid #dbdbdb;
-  width: 47px;
-  height: 32px;
+  box-shadow: inset 0 0 0 3px #dbdbdb;
+  width: 50px;
+  height: 35px;
 }
 
 .pagination-item:hover,
@@ -1072,6 +1091,7 @@ input[type=checkbox] {
 .pagination-item:active {
   background-color: #d5d5d5;
   color: #959595;
+  box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
 
 .pagination-next {
@@ -1108,10 +1128,10 @@ input[type=checkbox] {
 /*-------POPUP-----*/
 
 .feedback {
-  position: absolute;
+  position: fixed;
   left: 50%;
-  top: 45%;
-  transform: translate(-50%,-50%);
+  top: 10%;
+  margin-left: -480px;
 
   z-index: 2;
 
@@ -1148,19 +1168,29 @@ input[type=checkbox] {
 
  padding-left: 14px;
  margin-top: 12px;
+ outline: none;
 }
 
 .popup .name:hover,
-.popup .email:hover {
+.popup .email:hover,
+.popup .textarea:hover {
   border-color: #b4b9bb;
 }
 
 .popup .name:focus,
 .popup .email:focus,
-.name-label:focus,
-.email-label:focus {
+.popup .textarea:focus {
   border-color: #000000;
   color: #444444;
+}
+
+.popup .name:invalid,
+.popup .email:invalid {
+  border-color: #e74246;
+}
+
+.textarea {
+  outline: none;
 }
 
 .popup-name {

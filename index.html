@@ -15,10 +15,10 @@
             <img src="img/nerds-logo.svg" alt="Логотип Нердс" width="160" height="65">
           </a>
           <ul class="site-navigation">
-            <li><a href="#">Студия</a></li>
-            <li><a href="#">Клиенты</a></li>
-            <li><a href="nerds-catalog.html">Магазин</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#" class="site-navigation-link">Студия</a></li>
+            <li><a href="#" class="site-navigation-link">Клиенты</a></li>
+            <li><a href="nerds-catalog.html" class="site-navigation-link">Магазин</a></li>
+            <li><a href="#" class="site-navigation-link">Контакты</a></li>
           </ul>
           <ul class="user-navigation">
             <li><a href="#" class="user-basket">Корзина</a></li>
@@ -164,30 +164,6 @@
                  <button type="submit" class="button footer-btn">Напишите нам</button>
              </div>
            </div>
-
-           <section class="feedback">
-             <div class="popup-feedback">
-               <form action="#" method="post" class="popup-form">
-                 <div class="popup-title-container">
-                   <h2 class="popup-title">Напишите нам</h2>
-                 </div>
-                 <div class="popup popup-name">
-                   <label for="name">Ваше имя:</label>
-                   <input class="name" type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
-                 </div>
-                 <div class="popup popup-email">
-                   <label for="email">Ваш e-mail:</label>
-                   <input class="email" type="text" id="email" name="email" placeholder="Для отправки ответа">
-                 </div>
-                 <div class="popup feedback-text">
-                   <label for="textarea">Текс письма:</label>
-                   <textarea class="textarea" id="textarea" name="text" placeholder="В свободной форме"></textarea>
-                 </div>
-                 <button type="submit" class="button btn-popup">Отправить</button>
-               </form>
-              <button class="popup-btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-             </div>
-           </section>
          </div>
      </div>
      <div class="footer-bottom container">
@@ -210,5 +186,29 @@
        </div>
      </div>
    </footer>
+
+   <section class="feedback">
+     <div class="popup-feedback">
+       <form action="#" method="post" class="popup-form">
+         <div class="popup-title-container">
+           <h2 class="popup-title">Напишите нам</h2>
+         </div>
+         <div class="popup popup-name">
+           <label for="name">Ваше имя:</label>
+           <input class="name" type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+         </div>
+         <div class="popup popup-email">
+           <label for="email">Ваш e-mail:</label>
+           <input class="email" type="text" id="email" name="email" placeholder="Для отправки ответа">
+         </div>
+         <div class="popup feedback-text">
+           <label for="textarea">Текс письма:</label>
+           <textarea class="textarea" id="textarea" name="text" placeholder="В свободной форме"></textarea>
+         </div>
+         <button type="submit" class="button btn-popup">Отправить</button>
+       </form>
+      <button class="popup-btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+     </div>
+   </section>
  </body>
 </html>
