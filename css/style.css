@@ -177,9 +177,9 @@ a {
   cursor: pointer;
 }
 
-#btn-1:checked ~ .slider-controls label[for=btn-1],
-#btn-2:checked ~ .slider-controls label[for=btn-2],
-#btn-3:checked ~ .slider-controls label[for=btn-3] {
+.btn-1:checked ~ .slider-controls label[for=btn-1],
+.btn-2:checked ~ .slider-controls label[for=btn-2],
+.btn-3:checked ~ .slider-controls label[for=btn-3] {
   box-shadow: inset 0 0 0 2px #c1c1c1;
 }
 
@@ -221,15 +221,15 @@ a {
  display: none;
 }
 
-#btn-1:checked ~ .slides .slide:nth-child(1) {
+.btn-1:checked ~ .slides .slide:nth-child(1) {
   display: block;
 }
 
-#btn-2:checked ~ .slides .slide:nth-child(2) {
+.btn-2:checked ~ .slides .slide:nth-child(2) {
   display: block;
 }
 
-#btn-3:checked ~ .slides .slide:nth-child(3) {
+.btn-3:checked ~ .slides .slide:nth-child(3) {
   display: block;
 }
 
@@ -1103,6 +1103,7 @@ input[type=checkbox] {
 .icon-down-up {
   display: flex;
   padding-top: 2px;
+  cursor: pointer;
 }
 
 .sort-categories .icon-up,
