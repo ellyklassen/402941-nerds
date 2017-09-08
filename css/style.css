@@ -780,12 +780,11 @@ a {
 /*-----CATALOG-PAGE-----*/
 
 .catalog-page {
- margin-left: 80px;
- margin-bottom: 0;
- padding-top: 24px;
+ margin: 0;
+ padding-top: 71px;
  padding-right: 82px;
  padding-bottom: 103px;
-
+ padding-left: 80px;
 
  text-align: center;
  font-size: 55px;
@@ -804,7 +803,14 @@ a {
   display: flex;
   flex-direction: column;
   width: 260px;
-  margin-top: 40px;
+  padding-top: 56px;
+}
+
+.main-form h3 {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .form {
@@ -815,6 +821,8 @@ a {
 
 .range-filter {
   width: 260px;
+  padding-top: 47px;
+  padding-bottom: 56px;
 }
 
 .range-controls {
@@ -840,7 +848,7 @@ a {
 
 .range-controls .toggle {
   width: 4px;
-  height: 5px;
+  height: 4px;
   border: 8px solid #ffffff;
   background-color: #ababab;
   border-radius: 50%;
@@ -848,17 +856,26 @@ a {
 
   position: absolute;
   top: 30px;
-  left: 10px;
   cursor: pointer;
 }
 
 .range-controls .toggle-max {
-  left: 155px;
+  left: 160px;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.price-controls label {
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
 }
 
 .price-controls input {
   width: 60px;
-  padding: 8px 10px;
+  padding: 10px 10px;
   border: none;
   background-color: #eeeeee;
   font-size: 16px;
@@ -871,11 +888,21 @@ a {
 }
 
 .price-controls .min-price {
-  margin-right: 52px;
+  margin-right: 28px;
+  margin-left: 8px;
 }
+
+label .max-price {
+  margin-left: 8px;
+}
+
 
 .price-controls {
   white-space: nowrap;
+}
+
+.form-grid {
+  padding-bottom: 40px;
 }
 
 .radiobox {
@@ -883,9 +910,10 @@ a {
   vertical-align: top;
   cursor: pointer;
   position: relative;
+  padding-top: 14px;
   padding-left: 35px;
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
   font-size: 16px;
   line-height: 20px;
   outline: none;
@@ -908,7 +936,7 @@ input[type=radio] {
   margin-right: 10px;
   position: absolute;
   left: 0;
-  bottom: 1px;
+  bottom: 0;
 }
 
 .grid:checked + .radiobox::before{
@@ -940,14 +968,19 @@ input[type=radio] {
   cursor: default;
 }
 
+.form-checkbox {
+  padding-bottom: 43px;
+}
+
 .checkbox {
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
   position: relative;
+  padding-top: 14px;
   padding-left: 35px;
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
   font-size: 16px;
   line-height: 20px;
   outline: none;
@@ -970,7 +1003,7 @@ input[type=checkbox] {
   margin-right: 10px;
   position: absolute;
   left: 0;
-  bottom: 1px;
+  bottom: -1px;
 }
 
 .features-checkbox:checked + .checkbox::before {
@@ -1009,8 +1042,8 @@ input[type=checkbox] {
   vertical-align: top;
   color: #000000;
   background-color: #eeeeee;
-  padding: 20px 88px;
-  margin-top: 18px;
+  padding-top: 17px;
+  padding-bottom: 15px;
 }
 
 .main-form .button:hover,
@@ -1031,6 +1064,8 @@ input[type=checkbox] {
   width: 760px;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 54px;
 }
 
 .sort  {
@@ -1039,12 +1074,12 @@ input[type=checkbox] {
   line-height: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 55px;
+  padding-top: 55px;
 }
 
 .sort-categories {
   display: flex;
-  margin-top: 55px;
+  padding-top: 56px;
 }
 
 .sort-links  {
@@ -1067,6 +1102,7 @@ input[type=checkbox] {
 
 .icon-down-up {
   display: flex;
+  padding-top: 2px;
 }
 
 .sort-categories .icon-up,
@@ -1110,9 +1146,11 @@ input[type=checkbox] {
   display: inline-block;
   vertical-align: top;
   text-align: center;
-
-  padding: 18px 60px;
-  margin-top: 30px;
+  margin-top: 29px;
+  padding-top: 19px;
+  padding-right: 60px;
+  padding-bottom: 14px;
+  padding-left: 61px;
 }
 
 .examples .button:hover,
@@ -1132,7 +1170,6 @@ input[type=checkbox] {
   justify-content: space-between;
 
   width: 760px;
-  margin-top: 25px;
 }
 
 .template {
@@ -1140,7 +1177,7 @@ input[type=checkbox] {
   width: 360px;
   height: 575px;
 
-  margin-bottom: 33px;
+  margin-bottom: 34px;
   padding-top: 40px;
   background-image: url("../img/browser-off.svg");
   background-repeat: no-repeat;
@@ -1171,11 +1208,20 @@ input[type=checkbox] {
   color: #000000;
   font-size: 18px;
   line-height: 30px;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 29px;
+  padding-right: 5px;
 }
 
 .template-description-text {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.template-description-text p {
+  margin: 0;
+  padding-top: 13px;
 }
 
 /*------PAGINATION-LIST AND ITEMS-----*/
@@ -1199,20 +1245,20 @@ input[type=checkbox] {
   display: block;
   text-align: center;
 
-  height: 35px;
+  height: 33px;
   width: 50px;
   background: #eeeeee;
   border-radius: 2px;
 
   margin-right: 11px;
-  padding-top: 15px;
+  padding-top: 17px;
 }
 
 .pagination-item-current {
   background-color: #ffffff;
   box-shadow: inset 0 0 0 3px #dbdbdb;
   width: 50px;
-  height: 35px;
+  height: 33px;
 }
 
 .pagination-item:hover,
@@ -1228,10 +1274,11 @@ input[type=checkbox] {
 
 .pagination-next {
   width: 260px;
-  height: 35px;
+  height: 33px;
   background-color: #eeeeee;
   text-align: center;
-  padding-top: 15px;
+  text-transform: uppercase;
+  padding-top: 17px;
 }
 
 /*-----TEXT-DECORATION-----*/
@@ -1412,22 +1459,22 @@ input[type=checkbox] {
 
 @keyframes anvil {
   0% {
-    transform: scale(5) rotate(0);
+    transform: scale(5);
     opacity: 0;
     box-shadow: 0 0 0 rgba(241, 241, 241, 0);
   }
   50% {
-    transform: scale(1) rotate(-0.2deg);
+    transform: scale(1);
     opacity: 1;
     box-shadow: 0 0 0 rgba(241, 241, 241, 0.5);
   }
   75% {
-    transform: scale(1) rotate(0.2deg);
+    transform: scale(1);
     opacity: 1;
     box-shadow: 0 0 250px rgba(241, 241, 241, 0.5);
   }
   100% {
-    transform: scale(1) rotate(0);
+    transform: scale(1);
     opacity: 1;
     box-shadow: 0 0 500px rgba(241, 241, 241, 0);
   }
