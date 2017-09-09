@@ -523,9 +523,10 @@ td:nth-child(3) .table-sp {
 .main-footer .strong {
     font-size: 36px;
     line-height: 36px;
+    font-weight: bold;
     text-transform: none;
     margin: 0;
-    margin-bottom: 13px;
+    margin-bottom: 9px;
 }
 /*-----FOOTER-MAPS-----*/
 
@@ -684,7 +685,7 @@ td:nth-child(3) .table-sp {
 }
 .footer-slogan {
     margin-left: 126px;
-    margin-top: 7px;
+    margin-top: 11px;
 }
 /*-----INNER PAGE-----*/
 /*-----CATALOG-PAGE-----*/
@@ -1043,7 +1044,7 @@ label .max-price {
     display: block;
     position: absolute;
     bottom: 0;
-    overflow: scroll;
+    overflow: auto;
     width: 360px;
     max-height: 575px;
     background-color: #eeeeee;
