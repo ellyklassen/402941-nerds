@@ -21,6 +21,7 @@ a {
     color: #ffffff;
     background-color: #fb565a;
     text-transform: uppercase;
+    font-family: "Roboto", Arial, sans-serif;
     border: none;
     border-radius: 2px;
     cursor: pointer;
