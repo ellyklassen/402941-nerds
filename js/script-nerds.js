@@ -2,7 +2,7 @@ var feedback = document.querySelector(".footer-btn");
 var popup = document.querySelector(".feedback");
 var close = document.querySelector(".popup-btn-close");
 var userName = document.querySelector("[name=name]");
-var form = document.querySelector(".popup-form");
+var form = document.querySelector(".popup-feedback-form");
 var email = document.querySelector("[name=email]");
 var storage = localStorage.getItem("name");
 

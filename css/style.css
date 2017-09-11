@@ -87,18 +87,22 @@ a {
     margin-right: 41px;
 }
 .site-navigation-link:hover,
-.user-basket:hover {
-    color: #fb565a;
-}
+.user-basket:hover,
 .site-navigation-link:focus,
 .user-basket:focus {
-    color: #a6a6a6;
+    color: #fb565a;
 }
 .site-navigation-link:active,
-.user-basket:active,
+.user-basket:active {
+    color: #a6a6a6;
+}
 .site-navigation .current {
     color: #000000;
     border-bottom: 2px solid #fb565a;
+}
+.site-navigation .current:focus,
+.site-navigation .current:hover {
+    color: #fb565a;
 }
 .site-navigation .current {
     padding-bottom: 9px;
@@ -213,6 +217,7 @@ a {
     margin: 0;
     font-size: 16px;
     line-height: 24px;
+    color: #283136;
 }
 .slide .button {
     display: inline-block;
@@ -297,6 +302,7 @@ a {
     margin-bottom: 0;
     font-size: 16px;
     line-height: 24px;
+    color: #283136;
     width: 260px;
 }
 .products-item .product-title {
@@ -326,14 +332,16 @@ a {
     padding: 54px 0 23px 0;
 }
 .features-title {
-    margin: 0;
     font-size: 45px;
     line-height: 45px;
+    color: #000000;
     padding-top: 25px;
+    margin: 0;
 }
 .features-description-text {
     font-size: 16px;
     line-height: 24px;
+    color: #283136;
     padding: 30px 0 38px 0;
 }
 .features-description-text p {
@@ -344,6 +352,7 @@ a {
     margin: 0;
     padding-top: 28px;
     padding-left: 0;
+    color: #283136;
 }
 .features-list li:nth-child(1) {
     padding-left: 35px;
@@ -384,58 +393,50 @@ a {
     height: 2px;
     background-color: red;
 }
-.features-table {
+.features-statistic {
     width: 360px;
     padding: 40px 0px 0px 20px;
 }
-.features-table-name {
+.features-statistic-name {
     text-align: center;
     padding-top: 32px;
 }
-.features .table {
-    margin-top: 33px;
+.features .statistic {
+    margin-top: 52px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
-.table .strong {
+.statistic .strong {
     font-size: 45px;
 }
-.table-row1 td {
-    padding-top: 18px;
+.statistic-row1 {
+    display: flex;
+    padding-bottom: 18px;
 }
-.table-row1 td:nth-child(1) {
-    padding-right: 13px;
-    padding-left: 0px;
+.statistic-row1 div {
+    flex: 1 1 33%;
 }
-.table-row1 td:nth-child(2) {
-    padding-right: 0px;
-    padding-left: 7px;
-}
-.table-row1 td:nth-child(3) {
-    padding-left: 2px;
-    position: relative;
-    top: -12px;
-}
-.table-row1 .table-sp {
-    display: block;
+.statistic-row1 .statistic-sp {
     font-size: 25px;
-    top: -35px;
-    left: 76px;
+    top: -15px;
     position: relative;
     vertical-align: baseline;
 }
-td:nth-child(3) .table-sp {
-    position: absolute;
-    left: 53px;
-    top: 22px;
+.statistic-row2 {
+    color: #283136;
+    display: flex;
 }
-.table-row2 td {
-    padding-top: 2px;
+.statistic-row2 div {
+    padding-top: 5px;
+    margin: 0;
 }
-.table-row2 td:nth-child(1) {
+.statistic-row2 div:nth-child(1) {
     padding-right: 12px;
 }
-.table-row2 td:nth-child(2) {
-    padding-right: 20px;
-    padding-left: 7px;
+.statistic-row2 div:nth-child(2) {
+    padding-right: 24px;
+    padding-left: 13px;
 }
 /*-----PARTNERS-----*/
 
@@ -570,6 +571,7 @@ td:nth-child(3) .table-sp {
 }
 .address-wrapper p {
     margin: 0;
+    color: #666666;
 }
 .address-wrapper .address {
     padding-top: 22px;
@@ -589,7 +591,7 @@ td:nth-child(3) .table-sp {
 }
 .footer-button .button {
     padding-top: 17px;
-    padding-right: 42px;
+    padding-right: 45px;
     padding-bottom: 15px;
     padding-left: 44px;
     font-size: 16px;
@@ -686,6 +688,7 @@ td:nth-child(3) .table-sp {
 .footer-slogan {
     margin-left: 126px;
     margin-top: 11px;
+    color: #444444;
 }
 /*-----INNER PAGE-----*/
 /*-----CATALOG-PAGE-----*/
@@ -716,6 +719,7 @@ td:nth-child(3) .table-sp {
 .main-form h3 {
     font-size: 18px;
     line-height: 30px;
+    color: #000000;
     text-transform: uppercase;
     margin: 0;
 }
@@ -746,6 +750,7 @@ td:nth-child(3) .table-sp {
 .range-controls .bar {
     height: 2px;
     background-color: #00ca74;
+    width: 70%;
 }
 .range-controls .toggle {
     width: 4px;
@@ -806,7 +811,18 @@ label .max-price {
     margin-bottom: 6px;
     font-size: 16px;
     line-height: 20px;
+    color: #283136;
     outline: none;
+}
+.radiobox:hover,
+.radiobox:focus,
+.checkbox:hover,
+.checkbox:focus {
+    color: #000000;
+}
+.radiobox:disabled,
+.checkbox:disabled {
+    color: #bec1c2;
 }
 .grid[type=radio] {
     display: none;
@@ -863,6 +879,7 @@ label .max-price {
     margin-bottom: 6px;
     font-size: 16px;
     line-height: 20px;
+    color: #283136;
     outline: none;
 }
 .features-checkbox[type=checkbox] {
@@ -911,6 +928,7 @@ label .max-price {
     display: inline-block;
     vertical-align: top;
     color: #000000;
+    font-weight: 500;
     background-color: #eeeeee;
     padding-top: 17px;
     padding-bottom: 15px;
@@ -1001,11 +1019,12 @@ label .max-price {
     display: inline-block;
     vertical-align: top;
     text-align: center;
+    font-weight: 500;
     margin-top: 30px;
-    margin-bottom: 41px;
-    padding-top: 18px;
+    margin-bottom: 42px;
+    padding-top: 17px;
     padding-right: 60px;
-    padding-bottom: 14px;
+    padding-bottom: 15px;
     padding-left: 61px;
 }
 .examples .button:hover,
@@ -1071,6 +1090,7 @@ label .max-price {
 .template-description-text p {
     margin: 0;
     padding-top: 13px;
+    color: #666666;
 }
 /*------PAGINATION-LIST AND ITEMS-----*/
 
@@ -1162,7 +1182,7 @@ label .max-price {
 .feedback-error {
     animation: shake 0.6s;
 }
-.popup-feedback {
+.popup-feedback-form {
     width: 800px;
     padding: 70px 20px 50px;
     position: relative;
@@ -1203,12 +1223,11 @@ label .max-price {
 .textarea {
     outline: none;
 }
-.popup-name {
-    float: left;
-    margin-right: 40px;
+.popup-inputs {
+    display: flex;
 }
-.popup-email {
-    float: left;
+.popup-name {
+    margin-right: 40px;
 }
 .popup label {
     font-size: 16px;
@@ -1216,7 +1235,6 @@ label .max-price {
     font-weight: bold;
 }
 .feedback-text {
-    clear: both;
     padding-top: 35px;
 }
 .feedback-text .textarea {
@@ -1244,7 +1262,7 @@ label .max-price {
 .popup-btn-close {
     position: absolute;
     top: 80px;
-    right: 42px;
+    right: 105px;
     cursor: pointer;
     background-image: url("../img/close-cross.svg");
     background-repeat: no-repeat;

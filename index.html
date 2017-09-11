@@ -112,24 +112,24 @@
                     <li>Слайдшоу и видео для корпоротивных презентаций</li>
                 </ul>
             </div>
-            <div class="features-table">
+            <div class="features-statistic">
                 <img src="img/nerds-illustration.jpg" alt="Лого Нердс" width="360" height="208">
-                <p class="strong features-table-name">С 2004 года любим точность во всем:</p>
-                <table class="table">
-                    <tr class="strong table-row1">
-                        <td>146<span class="table-sp">%</span>
-                        </td>
-                        <td>100<span class="table-sp">%</span>
-                        </td>
-                        <td>50<span class="table-sp">%</span>
-                        </td>
-                    </tr>
-                    <tr class="table-row2">
-                        <td>Уровень самоотдачи</td>
-                        <td>Соблюдение сроков</td>
-                        <td>Минимальная предоплата</td>
-                    </tr>
-                </table>
+                <p class="strong features-statistic-name">С 2004 года любим точность во всем:</p>
+                <div class="statistic">
+                    <div class="strong statistic-row1">
+                        <div>146<span class="statistic-sp">%</span>
+                        </div>
+                        <div>100<span class="statistic-sp">%</span>
+                        </div>
+                        <div>50<span class="statistic-sp">%</span>
+                        </div>
+                    </div>
+                    <div class="statistic-row2">
+                        <div>Уровень самоотдачи</div>
+                        <div>Соблюдение сроков</div>
+                        <div>Минимальная предоплата</div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="partners">
@@ -161,7 +161,7 @@
                         <p class="address-tel">тел. +7 (812) 275-75-75</p>
                     </div>
                     <div class="footer-button">
-                        <button type="submit" class="button footer-btn">Напишите нам</button>
+                        <a class="button footer-btn" href="writeus.html">Напишите нам</a>
                     </div>
                 </div>
             </div>
@@ -170,13 +170,13 @@
             <div class="footer-social">
                 <ul class="footer-social-list">
                     <li class="social-button">
-                        <a href="#" class="social social-vk" title="Вконтакте"></a>
+                        <a href="#" class="social social-vk" title="Вконтакте"><span class="visually-hidden">Вконтакте</span></a>
                     </li>
                     <li class="social-button">
-                        <a href="#" class="social social-fb" title="Фейсбук"></a>
+                        <a href="#" class="social social-fb" title="Фейсбук"><span class="visually-hidden">Фейсбук</span></a>
                     </li>
                     <li class="social-button">
-                        <a href="#" class="social social-ig" title="Инстаграм"></a>
+                        <a href="#" class="social social-ig" title="Инстаграм"><span class="visually-hidden">Инстаграм</span></a>
                     </li>
                 </ul>
             </div>
@@ -187,11 +187,9 @@
         </div>
     </footer>
     <section class="feedback">
-        <div class="popup-feedback">
-            <form action="#" method="post" class="popup-form">
-                <div class="popup-title-container">
-                    <h2 class="popup-title">Напишите нам</h2>
-                </div>
+        <form action="#" method="post" class="popup-feedback-form">
+            <h2 class="popup-title">Напишите нам</h2>
+            <div class="popup-inputs">
                 <div class="popup popup-name">
                     <label for="name">Ваше имя:</label>
                     <input class="name" type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
@@ -200,15 +198,15 @@
                     <label for="email">Ваш e-mail:</label>
                     <input class="email" type="text" id="email" name="email" placeholder="Для отправки ответа">
                 </div>
-                <div class="popup feedback-text">
-                    <label for="textarea">Текс письма:</label>
-                    <textarea class="textarea" id="textarea" name="text" placeholder="В свободной форме"></textarea>
-                </div>
-                <button type="submit" class="button btn-popup">Отправить</button>
-            </form>
-            <button class="popup-btn-close" type="button"></button>
-        </div>
+            </div>
+            <div class="popup feedback-text">
+                <label for="textarea">Текс письма:</label>
+                <textarea class="textarea" id="textarea" name="text" placeholder="В свободной форме"></textarea>
+            </div>
+            <button type="submit" class="button btn-popup">Отправить</button>
+        </form>
+        <button class="popup-btn-close" type="button"></button>
     </section>
-    <script src="js/script-nerds.js"></script>
+    <script src="js/script-nerds.min.js"></script>
 </body>
 </html>

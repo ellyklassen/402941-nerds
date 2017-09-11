@@ -38,7 +38,7 @@
             <div class="range-filter">
                 <div class="range-controls">
                     <div class="scale">
-                        <div class="bar" style="width: 70%"></div>
+                        <div class="bar"></div>
                     </div>
                     <div class="toggle toggle-min"></div>
                     <div class="toggle toggle-max"></div>
@@ -95,8 +95,8 @@
                         <a href="#" class="sort-links">по названию</a>
                     </div>
                     <div class="icon-down-up">
-                        <a href="#" class="icon-down icon-current" title="Назад"></a>
-                        <a href="#" class="icon-up" title="Вперед"></a>
+                        <a href="#" class="icon-down icon-current" title="Вниз"><span class="visually-hidden">Вниз</span></a>
+                        <a href="#" class="icon-up" title="Вверх"><span class="visually-hidden">Вверх</span></a>
                     </div>
                 </div>
             </div>
@@ -187,7 +187,7 @@
                         <p class="address-tel">тел.: +7(812)275-75-75</p>
                     </div>
                     <div class="footer-button">
-                        <button type="submit" class="button footer-btn">Напишите нам</button>
+                        <a class="button footer-btn" href="writeus.html">Напишите нам</a>
                     </div>
                 </div>
             </div>
@@ -196,13 +196,13 @@
             <div class="footer-social">
                 <ul class="footer-social-list">
                     <li class="social-button">
-                        <a href="#" class="social social-vk" title="Вконтакте"></a>
+                        <a href="#" class="social social-vk" title="Вконтакте"><span class="visually-hidden">Вконтакте</span></a>
                     </li>
                     <li class="social-button">
-                        <a href="#" class="social social-fb" title="Фейсбук"></a>
+                        <a href="#" class="social social-fb" title="Фейсбук"><span class="visually-hidden">Фейсбук</span></a>
                     </li>
                     <li class="social-button">
-                        <a href="#" class="social social-ig" title="Инстаграм"></a>
+                        <a href="#" class="social social-ig" title="Инстаграм"><span class="visually-hidden">Инстаграм</span></a>
                     </li>
                 </ul>
             </div>
@@ -213,11 +213,11 @@
         </div>
     </footer>
     <section class="feedback">
-        <div class="popup-feedback">
-            <form action="#" method="post" class="popup-form">
-                <div class="popup-title">
-                    <h2 class="popup-title">Напишите нам</h2>
-                </div>
+        <form action="#" method="post" class="popup-feedback-form">
+            <div class="popup-title">
+                <h2 class="popup-title">Напишите нам</h2>
+            </div>
+            <div class="popup-inputs">
                 <div class="popup popup-name">
                     <label for="name" class="name-label">Ваше имя:</label>
                     <input class="name" type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
@@ -226,15 +226,15 @@
                     <label for="email" class="email-label">Ваш e-mail:</label>
                     <input class="email" type="email" id="email" name="email" placeholder="Для отправки ответа">
                 </div>
-                <div class="popup feedback-text">
-                    <label for="textarea">Текс письма:</label>
-                    <textarea class="textarea" id="textarea" name="text" placeholder="В свободной форме"></textarea>
-                </div>
-                <button type="submit" class="button btn-popup">Отправить</button>
-            </form>
-            <button class="popup-btn-close" type="button"></button>
-        </div>
+            </div>
+            <div class="popup feedback-text">
+                <label for="textarea">Текс письма:</label>
+                <textarea class="textarea" id="textarea" name="text" placeholder="В свободной форме"></textarea>
+            </div>
+            <button type="submit" class="button btn-popup">Отправить</button>
+        </form>
+        <button class="popup-btn-close" type="button"></button>
     </section>
-    <script src="js/script-nerds.js"></script>
+    <script src="js/script-nerds.min.js"></script>
 </body>
 </html>
